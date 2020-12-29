@@ -1,4 +1,4 @@
-package me.cyberfla.blockdestroyer;
+package net.cyberflame.blockdestroyer;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.cyberfla.blockdestroyer.command.BuildModeCommand;
+import net.cyberflame.blockdestroyer.command.BuildModeCommand;
 import net.minecraft.server.v1_8_R3.MinecraftServer;
 
 public class BlockDestroyer extends JavaPlugin {
