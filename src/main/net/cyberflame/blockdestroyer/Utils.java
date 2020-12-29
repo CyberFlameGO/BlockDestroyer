@@ -1,4 +1,4 @@
-package me.cyberfla.blockdestroyer;
+package net.cyberflame.blockdestroyer;
 
 import java.util.ArrayList;
 import java.util.List;
