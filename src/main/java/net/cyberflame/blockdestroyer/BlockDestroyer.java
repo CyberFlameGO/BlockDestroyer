@@ -11,7 +11,7 @@ import org.bukkit.command.Command;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.cyberflame.blockdestroyer.command.BuildModeCommand;
-import net.minecraft.server.v1_8_R3.MinecraftServer;
+import net.minecraft.server.v1_8_8R1.MinecraftServer;
 
 public class BlockDestroyer extends JavaPlugin {
 	
