@@ -1,4 +1,4 @@
-package net.cyberflame.blockdestroyer;
+package net.cyberflame.kpm;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,6 @@ public class Utils
 {
 
 	public static String NO_PERMISSION = "&cYou do not have permission to perform this command.";
-	
 	public static String BUILD_OTHER_TOGGLE_OFF = "&eYou &cdisabled &6%player%'s &ebuild-mode.";
 	public static String BUILD_OTHER_TOGGLE_ON = "&eYou &aenabled &6%player%'s &ebuild-mode.";
 	public static String BUILD_TOGGLE_OFF = "&eYou &cdisabled &eyour &ebuild-mode.";
@@ -77,23 +76,28 @@ public class Utils
 		return matches;
 	}
 	
-	public static String replace(String text) {
+	public static String replace(String text)
+	{
 		return ChatColor.translateAlternateColorCodes('&', text);
 	}
 	
-	public static void sendMessage(CommandSender sender, String message) {
+	public static void sendMessage(CommandSender sender, String message)
+	{
 		sender.sendMessage(replace(message));
 	}
 	
-	public static void bMsg(String message) {
+	public static void bMsg(String message)
+	{
 		for (Player p : Bukkit.getOnlinePlayers()) { sendMessage(p, message); }
 	}
 	
-	public static void sendConsoleMessage(String message) {
-		BlockDestroyer.getInstance().getServer().getConsoleSender().sendMessage(replace(message));
+	public static void sendConsoleMessage(String message)
+	{
+		KPM.getInstance().getServer().getConsoleSender().sendMessage(replace(message));
 	}
 	
-	public static String format(String message, String str0, String str1) {
+	public static String format(String message, String str0, String str1)
+	{
 		return message.replace(str0, str1);
 	}
 

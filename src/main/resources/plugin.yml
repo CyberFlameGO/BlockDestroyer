@@ -1,5 +1,5 @@
 name: BlockDestroyer
-main: net.cyberflame.blockdestroyer.BlockDestroyer
+main: net.cyberflame.kpm.KPM
 version: 1.0
-description: BlockDestroyer is a plugin made by CyberFlame primarily for OuterWorlds. This was updated by StarZorrow (zorurruan) and I thank him very much for his modifications to it as the original was kinda sloppy.
+description: KPM is a plugin made by CyberFlame primarily for OuterWorlds. This was updated by StarZorrow (zorurruan) and I thank him very much for his modifications to it as the original was kinda sloppy.
 author: Owner_of_Mojang (CyberFlame)

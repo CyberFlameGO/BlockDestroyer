@@ -1,7 +1,6 @@
-package net.cyberflame.blockdestroyer;
+package net.cyberflame.kpm.listeners;
 
-import java.util.UUID;
-
+import net.cyberflame.kpm.KPM;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -10,36 +9,49 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.potion.PotionEffect;
 
-public class PlayerListener implements Listener {
+import java.util.Collection;
+import java.util.HashMap;
 
-	private BlockDestroyer plugin;
+public class PlayerListener implements Listener
+{
 
-	public PlayerListener(BlockDestroyer plugin) {
+	private KPM plugin;
+	private HashMap<String, Collection<PotionEffect>> playerMap = new HashMap<>();
+
+	public PlayerListener(KPM plugin)
+	{
 		this.plugin = plugin;
 	}
 
 	@EventHandler
-	public void onBlockPlace(BlockPlaceEvent e) {
+	public void onBlockPlace(BlockPlaceEvent e)
+	{
 		//Get the block placed, who placed it and the world,
 		Player player = e.getPlayer();
 		Block block = e.getBlock();
 		World world = block.getWorld();
 		//check if player has buildmode enabled,
-		if (plugin.getBuildEnabled(player.getUniqueId())) {
+		if (plugin.getBuildEnabled(player.getUniqueId()))
+		{
 			return;
 		}
 		//else check if it was in one of the disabled worlds,
-		for (int i = 0; i < plugin.getDisabledWorlds().size(); i++) {
+		for (int i = 0; i < plugin.getDisabledWorlds().size(); i++)
+		{
 			String worldname = plugin.getDisabledWorlds().get(i);
-			if (world.getName().equalsIgnoreCase(worldname)) {
+			if (world.getName().equalsIgnoreCase(worldname))
+			{
 				//return on same name as the world is in disabled-worlds.
 				return;
 			}
 		}
 		//else, schedule a delayed-task to run after x amount of ticks,
-		Bukkit.getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable() {
-			public void run() {
+		Bukkit.getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable()
+		{
+			public void run()
+			{
 				//remove the block placed.
 				block.setType(Material.AIR);
 			}
