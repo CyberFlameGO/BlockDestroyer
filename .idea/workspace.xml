@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="update pom.xml as nms classes are no longer necessary">
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/command/BuildModeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/command/BuildModeCommand.java" afterDir="false" />
-    </list>
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="fix stuff" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +35,28 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KeepPotions.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/KeepPotions.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.KeepPotions.jar" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,7 +68,7 @@
       <workItem from="1623114289673" duration="809000" />
       <workItem from="1623115809073" duration="725000" />
       <workItem from="1623116752574" duration="1520000" />
-      <workItem from="1623195848277" duration="800000" />
+      <workItem from="1623195848277" duration="1272000" />
     </task>
     <task id="LOCAL-00001" summary="skeet">
       <created>1623195696747</created>
@@ -78,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623196343297</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix stuff">
+      <created>1623196802921</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623196802921</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +129,7 @@
     <MESSAGE value="deez nuts" />
     <MESSAGE value="refactor: Rename plugin + repo to KPM" />
     <MESSAGE value="update pom.xml as nms classes are no longer necessary" />
-    <option name="LAST_COMMIT_MESSAGE" value="update pom.xml as nms classes are no longer necessary" />
+    <MESSAGE value="fix stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix stuff" />
   </component>
 </project>
