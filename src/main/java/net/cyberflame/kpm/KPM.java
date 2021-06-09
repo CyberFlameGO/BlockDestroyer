@@ -24,7 +24,7 @@ public class KPM extends JavaPlugin
     	this.plugin = this;
     	this.getConfig().options().copyDefaults(true);
         this.saveConfig();
-        this.getCommand("buildmode").setExecutor(new BuildModeCommand());
+        this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
         enabledBuild = new HashMap<UUID, Boolean>();
         disabledworlds = this.getConfig().getStringList("disabled-worlds");
         Bukkit.getPluginManager().registerEvents(new PlayerListener(this), this);

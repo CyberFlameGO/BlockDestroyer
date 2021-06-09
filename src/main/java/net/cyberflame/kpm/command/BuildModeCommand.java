@@ -8,22 +8,29 @@ import org.bukkit.entity.Player;
 
 import net.cyberflame.kpm.KPM;
 import net.cyberflame.kpm.Utils;
-import net.md_5.bungee.api.ChatColor;
 
-public class BuildModeCommand implements CommandExecutor {
+public class BuildModeCommand implements CommandExecutor
+{
 
-	private KPM plugin;
-	private String permission = "kpm.buildmode";
-	private String noPermission = Utils.NO_PERMISSION;
+	private final KPM plugin;
+	public String permission = "kpm.buildmode";
+
+	public BuildModeCommand(KPM plugin) {
+		this.plugin = plugin;
+	}
 
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (!sender.hasPermission(permission)) {
-			Utils.sendMessage(sender, noPermission);
+	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
+	{
+		if (!sender.hasPermission(permission))
+		{
+			Utils.sendMessage(sender, Utils.NO_PERMISSION);
 			return true;
 		}
-		if (args.length == 1) {
-			if (Bukkit.getPlayer(args[0]) != null) {
+		if (args.length == 1)
+		{
+			if (Bukkit.getPlayer(args[0]) != null)
+			{
 				Player target = Bukkit.getPlayer(args[0]);
 				String targetname = Bukkit.getPlayer(args[0]).getName();
 				plugin.setBuildEnabled(Bukkit.getPlayer(args[0]).getUniqueId());
@@ -31,7 +38,8 @@ public class BuildModeCommand implements CommandExecutor {
 				Utils.sendMessage(target, (plugin.getBuildEnabled(target.getUniqueId()) ? Utils.BUILD_TOGGLE_ON.replaceAll("%player%", targetname) : Utils.BUILD_TOGGLE_OFF.replaceAll("%player%", targetname)));
 				return true;
 			}
-			else {
+			else
+			{
 				Utils.sendMessage(sender, Utils.UNKNOWN_PLAYER.replaceAll("%player%", args[0]));
 				return true;
 			}
