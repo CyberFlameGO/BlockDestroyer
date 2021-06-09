@@ -9,18 +9,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.potion.PotionEffect;
 
-import java.util.Collection;
-import java.util.HashMap;
-
-public class PlayerListener implements Listener
+public class PlayerBlockPlaceListener implements Listener
 {
 
 	private KPM plugin;
-	private HashMap<String, Collection<PotionEffect>> playerMap = new HashMap<>();
 
-	public PlayerListener(KPM plugin)
+	public PlayerBlockPlaceListener(KPM plugin)
 	{
 		this.plugin = plugin;
 	}
