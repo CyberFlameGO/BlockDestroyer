@@ -8,7 +8,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import net.cyberflame.kpm.KPM;
-import net.cyberflame.kpm.utils.StringUtils;
 
 public class BuildModeCommand implements CommandExecutor
 {

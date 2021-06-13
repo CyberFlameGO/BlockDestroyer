@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="an attempt at fixing messy code">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/SoupListener.java" afterDir="false" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="add soup">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerUnequipListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/command/BuildModeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/command/BuildModeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerSoupListener.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623624023087</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add soup">
+      <created>1623625416770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623625416770</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +185,7 @@
     <MESSAGE value="reformat + still adding armor event" />
     <MESSAGE value="fix comments lmao" />
     <MESSAGE value="an attempt at fixing messy code" />
-    <option name="LAST_COMMIT_MESSAGE" value="an attempt at fixing messy code" />
+    <MESSAGE value="add soup" />
+    <option name="LAST_COMMIT_MESSAGE" value="add soup" />
   </component>
 </project>
