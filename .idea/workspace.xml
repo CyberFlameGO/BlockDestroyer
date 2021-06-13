@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="bofa">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/events/ArmorEquipEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ArmorListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ArmorType.java" afterDir="false" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="add armor prep + todo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerSoupListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/command/BuildModeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/command/BuildModeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/command/BuildModeCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/command/BuildModeCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDeathListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDeathListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ArmorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ArmorListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ArmorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ArmorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623291922745</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add armor prep + todo">
+      <created>1623616996197</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623616996197</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +155,7 @@
     <MESSAGE value="re-add a listener class i deleted without committing, it's a temp class" />
     <MESSAGE value="update artifactid" />
     <MESSAGE value="bofa" />
-    <option name="LAST_COMMIT_MESSAGE" value="bofa" />
+    <MESSAGE value="add armor prep + todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add armor prep + todo" />
   </component>
 </project>

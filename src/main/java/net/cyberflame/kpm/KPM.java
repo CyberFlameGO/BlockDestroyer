@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import net.cyberflame.kpm.listeners.ArmorListener;
 import net.cyberflame.kpm.listeners.PlayerBlockPlaceListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -27,6 +28,8 @@ public class KPM extends JavaPlugin
         this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
         enabledBuild = new HashMap<UUID, Boolean>();
         disabledworlds = this.getConfig().getStringList("disabled-worlds");
+		saveDefaultConfig();
+		getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
         Bukkit.getPluginManager().registerEvents(new PlayerBlockPlaceListener(this), this);
         System.out.println("[KPM] Loaded");
     }
