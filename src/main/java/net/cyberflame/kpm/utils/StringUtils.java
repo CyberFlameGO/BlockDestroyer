@@ -1,14 +1,15 @@
-package net.cyberflame.kpm;
+package net.cyberflame.kpm.utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import net.cyberflame.kpm.KPM;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Utils
+public class StringUtils
 {
 
 	public static String NO_PERMISSION = "&cYou do not have permission to perform this command.";

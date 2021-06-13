@@ -9,6 +9,7 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
+      <!-- TODO: SWITCH FROM SPIGOTREPO TO PAPERMC-->
     </repositories>
   <dependencies>
   	<dependency>
