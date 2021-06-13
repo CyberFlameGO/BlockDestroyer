@@ -79,7 +79,8 @@ public class ArmorListener implements Listener
             ItemStack oldArmorPiece = e.getCurrentItem();
             if(numberkey){
                 if(e.getClickedInventory().getType().equals(InventoryType.PLAYER))
-                {// Prevents shit in the 2by2 crafting
+                {
+                    // Prevents stuff in the 2by2 crafting
                     // e.getClickedInventory() == The players inventory
                     // e.getHotBarButton() == key people are pressing to equip or unequip the item to or from.
                     // e.getRawSlot() == The slot the item is going to.
@@ -177,7 +178,7 @@ public class ArmorListener implements Listener
                 event.setCancelled(true);
             }
         }
-        // Debug shit
+        // Debug code
 		/*System.out.println("Slots: " + event.getInventorySlots().toString());
 		System.out.println("Raw Slots: " + event.getRawSlots().toString());
 		if(event.getCursor() != null){
