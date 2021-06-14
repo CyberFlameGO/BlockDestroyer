@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 public class StringUtils
 {
 
-	public static String NO_PERMISSION = "&cYou do not have permission to perform this command.";
+	public static String NO_PERMISSION = "&cYou do not have permission to perform this commands.";
 	public static String BUILD_OTHER_TOGGLE_OFF = "&eYou &cdisabled &6%player%'s &ebuild-mode.";
 	public static String BUILD_OTHER_TOGGLE_ON = "&eYou &aenabled &6%player%'s &ebuild-mode.";
 	public static String BUILD_TOGGLE_OFF = "&eYou &cdisabled &eyour &ebuild-mode.";

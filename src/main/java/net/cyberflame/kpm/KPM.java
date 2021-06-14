@@ -7,10 +7,9 @@ import java.util.UUID;
 
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
-import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import net.cyberflame.kpm.command.BuildModeCommand;
+import net.cyberflame.kpm.commands.BuildModeCommand;
 
 public class KPM extends JavaPlugin
 {

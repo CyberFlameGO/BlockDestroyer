@@ -1,4 +1,4 @@
-package net.cyberflame.kpm.command;
+package net.cyberflame.kpm.commands;
 
 import net.cyberflame.kpm.utils.StringUtils;
 import org.bukkit.Bukkit;
