@@ -67,9 +67,8 @@ public class SoupListener implements Listener {
         }
     }
 
-    // This logic is pretty much pointless but I'm keeping it here regardless
     @EventHandler
-    public void dropitem(PlayerDropItemEvent event) {
+    public void dropItem(PlayerDropItemEvent event) {
         Player player = event.getPlayer();
         Item item = event.getItemDrop();
         Material type = item.getItemStack().getType();
