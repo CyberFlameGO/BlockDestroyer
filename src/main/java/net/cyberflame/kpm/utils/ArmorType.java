@@ -1,6 +1,5 @@
 package net.cyberflame.kpm.utils;
 
-import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import net.cyberflame.kpm.listeners.ArmorListener;
 
@@ -25,7 +24,7 @@ public enum ArmorType
     {
         if(ArmorListener.isAirOrNull(itemStack)) return null;
         String type = itemStack.getType().name();
-        if(type.endsWith("_HELMET") || type.endsWith("_SKULL") || type.endsWith("_HEAD")) return HELMET;
+        if(type.endsWith("_HELMET") || type.endsWith("_SKULL") || type.endsWith("_HEAD") || type.equals("GLASS")) return HELMET;
         else if(type.endsWith("_CHESTPLATE") || type.equals("ELYTRA")) return CHESTPLATE;
         else if(type.endsWith("_LEGGINGS")) return LEGGINGS;
         else if(type.endsWith("_BOOTS")) return BOOTS;
