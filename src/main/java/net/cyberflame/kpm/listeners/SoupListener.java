@@ -11,6 +11,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class SoupListener implements Listener
 {
@@ -34,7 +35,7 @@ public class SoupListener implements Listener
                         double newHealth = Math.min(player.getHealth() + 7.0, player.getMaxHealth());
                         player.setHealth(newHealth);
                         int slot = player.getInventory().getHeldItemSlot();
-                        player.getInventory().getItem(slot).setType(Material.AIR);
+                        player.getInventory().setItem(slot, new ItemStack(Material.AIR));
                     }
             }
     }

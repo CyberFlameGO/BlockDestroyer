@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="various additions">
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="1picks dumb helmet thing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/SoupListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/SoupListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +28,7 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1te0X4hCRN128BsWR0Q9xqvTdC8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -47,25 +48,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="KPM [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -104,6 +91,7 @@
       <workItem from="1623114289673" duration="809000" />
       <workItem from="1623115809073" duration="725000" />
       <workItem from="1623116752574" duration="1520000" />
+      <workItem from="1623709087409" duration="399000" />
     </task>
     <task id="LOCAL-00001" summary="skeet">
       <created>1623195696747</created>
@@ -140,21 +128,105 @@
       <option name="project" value="LOCAL" />
       <updated>1623278336070</updated>
     </task>
-    <task id="LOCAL-00006" summary="uncommited+patches">
-      <created>1623705203191</created>
+    <task id="LOCAL-00006" summary="bofa">
+      <created>1623291922745</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1623705203191</updated>
+      <updated>1623291922745</updated>
     </task>
-    <task id="LOCAL-00007" summary="various additions">
-      <created>1623708106573</created>
+    <task id="LOCAL-00007" summary="add armor prep + todo">
+      <created>1623616996197</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1623708106573</updated>
+      <updated>1623616996197</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="reformat + still adding armor event">
+      <created>1623623674079</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623623674080</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fix comments lmao">
+      <created>1623623781331</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623623781331</updated>
+    </task>
+    <task id="LOCAL-00010" summary="an attempt at fixing messy code">
+      <created>1623624023087</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623624023087</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add soup">
+      <created>1623625416770</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623625416770</updated>
+    </task>
+    <task id="LOCAL-00012" summary="various updates">
+      <created>1623628210314</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1623628210314</updated>
+    </task>
+    <task id="LOCAL-00013" summary="run maven clean goal">
+      <created>1623628291651</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1623628291651</updated>
+    </task>
+    <task id="LOCAL-00014" summary="???">
+      <created>1623632631053</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1623632631053</updated>
+    </task>
+    <task id="LOCAL-00015" summary="git is confusing sometimes lol">
+      <created>1623632774670</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1623632774670</updated>
+    </task>
+    <task id="LOCAL-00016" summary="git is confusing sometimes lol pt. 2">
+      <created>1623633007661</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623633007661</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: rename `command` to `commands`">
+      <created>1623633115170</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1623633115170</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix bad refactor">
+      <created>1623633200988</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623633200988</updated>
+    </task>
+    <task id="LOCAL-00019" summary="workspace.xml update">
+      <created>1623633591533</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1623633591533</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,8 +251,20 @@
     <MESSAGE value="hmmmmmm" />
     <MESSAGE value="re-add a listener class i deleted without committing, it's a temp class" />
     <MESSAGE value="update artifactid" />
-    <MESSAGE value="uncommited+patches" />
-    <MESSAGE value="various additions" />
-    <option name="LAST_COMMIT_MESSAGE" value="various additions" />
+    <MESSAGE value="bofa" />
+    <MESSAGE value="add armor prep + todo" />
+    <MESSAGE value="reformat + still adding armor event" />
+    <MESSAGE value="fix comments lmao" />
+    <MESSAGE value="an attempt at fixing messy code" />
+    <MESSAGE value="add soup" />
+    <MESSAGE value="various updates" />
+    <MESSAGE value="run maven clean goal" />
+    <MESSAGE value="???" />
+    <MESSAGE value="git is confusing sometimes lol" />
+    <MESSAGE value="git is confusing sometimes lol pt. 2" />
+    <MESSAGE value="refactor: rename `command` to `commands`" />
+    <MESSAGE value="fix bad refactor" />
+    <MESSAGE value="workspace.xml update" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
   </component>
 </project>
