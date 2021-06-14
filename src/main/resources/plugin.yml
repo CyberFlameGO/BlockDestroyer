@@ -9,6 +9,6 @@ permissions:
     default: op
 commands:
   buildmode:
-    description: Buildmode root commands
+    description: Buildmode toggle root command
     permission: kpm.buildmode
     usage: /buildmode
