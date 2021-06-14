@@ -17,8 +17,8 @@ public final class ArmorEquipEvent extends PlayerEvent implements Cancellable
     private ItemStack oldArmorPiece, newArmorPiece;
 
     /**
-     * @param player The player who put on / removed the armor.
-     * @param type The ArmorType of the armor added
+     * @param player        The player who put on / removed the armor.
+     * @param type          The ArmorType of the armor added
      * @param oldArmorPiece The ItemStack of the armor removed.
      * @param newArmorPiece The ItemStack of the armor added.
      */
