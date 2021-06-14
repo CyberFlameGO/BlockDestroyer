@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="git is confusing sometimes lol">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="fix bad refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +181,28 @@
       <option name="project" value="LOCAL" />
       <updated>1623632774670</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="git is confusing sometimes lol pt. 2">
+      <created>1623633007661</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623633007661</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: rename `command` to `commands`">
+      <created>1623633115170</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1623633115170</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix bad refactor">
+      <created>1623633200988</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623633200988</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +237,9 @@
     <MESSAGE value="run maven clean goal" />
     <MESSAGE value="???" />
     <MESSAGE value="git is confusing sometimes lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="git is confusing sometimes lol" />
+    <MESSAGE value="git is confusing sometimes lol pt. 2" />
+    <MESSAGE value="refactor: rename `command` to `commands`" />
+    <MESSAGE value="fix bad refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bad refactor" />
   </component>
 </project>
