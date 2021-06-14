@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="workspace.xml update">
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="just delete the soup instead of giving a bowl to drop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/SoupListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/SoupListener.java" afterDir="false" />
+    </list>
+    <list id="5f65ec56-42b1-47db-9efc-0f44e1eccc04" name="Revert &quot;just delete the soup instead of giving a bowl to drop&quot;" comment="Revert &quot;just delete the soup instead of giving a bowl to drop&quot;&#10;&#10;This reverts commit 89528a19">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +32,19 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="5f65ec56-42b1-47db-9efc-0f44e1eccc04" />
+        <range start1="9" end1="9" start2="9" end2="12" changelist="5f65ec56-42b1-47db-9efc-0f44e1eccc04" />
+        <range start1="31" end1="31" start2="34" end2="45" changelist="5f65ec56-42b1-47db-9efc-0f44e1eccc04" />
+        <range start1="54" end1="67" start2="68" end2="68" changelist="1d0839a9-ec55-4779-be3a-a23d9f13e044" />
+        <range start1="170" end1="178" start2="171" end2="172" changelist="5f65ec56-42b1-47db-9efc-0f44e1eccc04" />
+        <range start1="210" end1="212" start2="204" end2="205" changelist="5f65ec56-42b1-47db-9efc-0f44e1eccc04" />
+      </ranges>
+    </file>
   </component>
   <component name="ProjectId" id="1te0X4hCRN128BsWR0Q9xqvTdC8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -155,14 +171,7 @@
       <option name="project" value="LOCAL" />
       <updated>1623628291651</updated>
     </task>
-    <task id="LOCAL-00014" summary="workspace.xml update">
-      <created>1623628579824</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1623628579824</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +204,6 @@
     <MESSAGE value="add soup" />
     <MESSAGE value="various updates" />
     <MESSAGE value="run maven clean goal" />
-    <MESSAGE value="workspace.xml update" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml update" />
+    <option name="LAST_COMMIT_MESSAGE" value="run maven clean goal" />
   </component>
 </project>
