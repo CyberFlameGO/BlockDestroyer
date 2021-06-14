@@ -28,7 +28,7 @@ public class SoupListener implements Listener {
                 double newHealth = Math.min(player.getHealth() + 7.0, player.getMaxHealth());
                 player.setHealth(newHealth);
                 int slot = player.getInventory().getHeldItemSlot();
-                player.getInventory().getItem(slot).setType(Material.BOWL);
+                player.getInventory().getItem(slot).setType(Material.AIR);
             }
         }
     }
@@ -44,7 +44,7 @@ public class SoupListener implements Listener {
                 double newHealth = Math.min(player.getHealth() + 7.0, player.getMaxHealth());
                 player.setHealth(newHealth);
                 int slot = player.getInventory().getHeldItemSlot();
-                player.getInventory().getItem(slot).setType(Material.BOWL);
+                player.getInventory().getItem(slot).setType(Material.AIR);
             }
         }
     }
@@ -61,12 +61,13 @@ public class SoupListener implements Listener {
                     double newHealth = Math.min(player.getHealth() + 7.0, player.getMaxHealth());
                     player.setHealth(newHealth);
                     int slot = player.getInventory().getHeldItemSlot();
-                    player.getInventory().getItem(slot).setType(Material.BOWL);
+                    player.getInventory().getItem(slot).setType(Material.AIR);
                 }
             }
         }
     }
 
+    // This logic is pretty much pointless but I'm keeping it here regardless
     @EventHandler
     public void dropitem(PlayerDropItemEvent event) {
         Player player = event.getPlayer();
