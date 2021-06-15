@@ -30,7 +30,7 @@ public class EntityDamageByEntityListener implements Listener
 
                 if (ps instanceof Player)
                 {
-                    victim.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 20 * 5, 1));
+                    victim.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 20 * 10, 1));
                 }
             }
     }
