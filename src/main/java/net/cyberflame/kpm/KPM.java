@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import net.cyberflame.kpm.commands.BuildModeCommand;
@@ -28,14 +29,18 @@ public class KPM extends JavaPlugin
         enabledBuild = new HashMap<UUID, Boolean>();
         disabledworlds = this.getConfig().getStringList("disabled-worlds");
         saveDefaultConfig();
+
+        PluginManager pm = Bukkit.getPluginManager();
+
         Bukkit.getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerBlockPlaceListener(this), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerHitListener(), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerProjectileLandListener(), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerUnequipListener(), this);
-        Bukkit.getPluginManager().registerEvents(new SoupListener(), this);
+        pm.registerEvents(new PlayerBlockPlaceListener(this), this);
+        pm.registerEvents(new PlayerDeathListener(), this);
+        pm.registerEvents(new EntityDamageByEntityListener(), this);
+        pm.registerEvents(new PlayerJoinListener(), this);
+        pm.registerEvents(new PlayerProjectileLandListener(), this);
+        pm.registerEvents(new PlayerUnequipListener(), this);
+        pm.registerEvents(new PlayerSoupListener(), this);
+
         System.out.println("[KPM] Loaded");
     }
 
