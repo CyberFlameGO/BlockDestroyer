@@ -1,6 +1,11 @@
 # For the block destroyer module of this plugin
-disabled-worlds: []
-\\ - disabled-world
+
+# If you want to remove all entries, uncomment the brackets
+disabled-worlds: #[]
+  - disabled-world
+
+# For the armor module of this plugin
+
 # All blocks with an inventory or any blocks that when right clicked shouldn't equip armor.
 blocked:
   - FURNACE
