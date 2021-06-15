@@ -13,12 +13,12 @@ import org.bukkit.projectiles.ProjectileSource;
 public class EntityDamageByEntityListener implements Listener
 {
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
-    public void onPlayerAttack(EntityDamageByEntityEvent e)
+    public void onEntityDamageByEntity(EntityDamageByEntityEvent e)
     {
         if (e.getDamager() instanceof Player && e.getEntity() instanceof Player)
         {
             Player attacker = (Player) e.getDamager();
-            if (attacker.getActivePotionEffects().contains(PotionEffectType.INVISIBILITY))
+            if (attacker.hasPotionEffect(PotionEffectType.INVISIBILITY))
             {
                 attacker.removePotionEffect(PotionEffectType.INVISIBILITY);
             }
