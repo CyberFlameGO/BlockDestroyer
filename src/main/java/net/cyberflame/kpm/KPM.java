@@ -38,6 +38,7 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new EntityDamageByEntityListener(), this);
         pm.registerEvents(new PlayerJoinListener(), this);
         pm.registerEvents(new PlayerProjectileLandListener(), this);
+        pm.registerEvents(new PlayerPotionConsumeListener(), this);
         pm.registerEvents(new PlayerUnequipListener(), this);
         pm.registerEvents(new PlayerSoupListener(), this);
 
