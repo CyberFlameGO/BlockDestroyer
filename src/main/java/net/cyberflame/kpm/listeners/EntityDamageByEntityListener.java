@@ -16,18 +16,14 @@ public class EntityDamageByEntityListener implements Listener
     public void onPlayerAttack(EntityDamageByEntityEvent e)
     {
         if (e.getDamager() instanceof Player && e.getEntity() instanceof Player)
+        {
+            Player attacker = (Player) e.getDamager();
+            if (attacker.getActivePotionEffects().contains(PotionEffectType.INVISIBILITY))
             {
-                Player attacker = (Player) e.getDamager();
-                if (attacker.getActivePotionEffects().contains(PotionEffectType.INVISIBILITY))
-                    {
-                        attacker.removePotionEffect(PotionEffectType.INVISIBILITY);
-                    }
+                attacker.removePotionEffect(PotionEffectType.INVISIBILITY);
             }
-    }
-    @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
-    public void onSnowballHit(EntityDamageByEntityEvent e) {
-        if ((e.getDamager() instanceof Snowball))
-            if ((e.getEntity() instanceof Player))
+        } else if (e.getDamager() instanceof Snowball)
+            if (e.getEntity() instanceof Player)
             {
                 Player victim = (Player) e.getEntity();
                 ProjectileSource ps = ((Snowball) e.getDamager()).getShooter();
