@@ -9,6 +9,14 @@
           <id>papermc</id>
           <url>https://papermc.io/repo/repository/maven-public/</url>
       </repository>
+      <repository>
+          <id>sonatype</id>
+          <url>https://oss.sonatype.org/content/groups/public/</url>
+      </repository>
+      <repository>
+          <id>spigot-repo</id>
+          <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+      </repository>
   </repositories>
   <dependencies>
   	    <dependency>
@@ -17,6 +25,18 @@
   		    <version>1.8.8-R0.1-SNAPSHOT</version>
   		    <scope>provided</scope>
   	    </dependency>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.destroystokyo.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
   </dependencies>
 	<build>
         <defaultGoal>clean install</defaultGoal>
