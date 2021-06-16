@@ -3,6 +3,7 @@ package net.cyberflame.kpm.listeners;
 import net.cyberflame.kpm.KPM;
 import org.bukkit.*;
 import org.bukkit.block.Block;
+import org.bukkit.Effect;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -56,7 +57,6 @@ public class PlayerBlockPlaceListener implements Listener
                     //remove the block placed.
                     block.setType(Material.AIR);
                     world.playSound(location, Sound.DIG_STONE, 1F, 1F);
-                    world.playEffect(location, Effect.TILE_BREAK, block);
 
                 }
             }, 20L * 2L * 3l);
