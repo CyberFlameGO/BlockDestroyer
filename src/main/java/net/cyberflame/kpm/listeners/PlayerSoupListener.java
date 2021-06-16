@@ -96,7 +96,7 @@ public class PlayerSoupListener implements Listener
                 }, 20 * 10);
             } else
             {
-                event.setCancelled(true);
+                //event.setCancelled(true);
                 player.updateInventory();
                 return;
             }

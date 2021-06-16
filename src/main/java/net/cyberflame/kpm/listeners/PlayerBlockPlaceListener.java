@@ -1,9 +1,7 @@
 package net.cyberflame.kpm.listeners;
 
 import net.cyberflame.kpm.KPM;
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.World;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -28,15 +26,17 @@ public class PlayerBlockPlaceListener implements Listener
         Player player = e.getPlayer();
         Block block = e.getBlock();
         World world = block.getWorld();
+        Location location = e.getBlockPlaced().getLocation();
+        Material blockMaterial = e.getBlockPlaced().getType();
         //check if player has buildmode enabled,
         if (plugin.getBuildEnabled(player.getUniqueId()))
             {
                 return;
             }
         //else check if it was in one of the disabled worlds,
-        for (int i = 0; i < plugin.getDisabledWorlds().size(); i++)
+        for (int i = 0; i < KPM.getDisabledWorlds().size(); i++)
             {
-                String worldname = plugin.getDisabledWorlds().get(i);
+                String worldname = KPM.getDisabledWorlds().get(i);
                 if (world.getName().equalsIgnoreCase(worldname))
                     {
                         //return on same name as the world is in disabled-worlds.
@@ -44,13 +44,24 @@ public class PlayerBlockPlaceListener implements Listener
                     }
             }
         //else, schedule a delayed-task to run after x amount of ticks,
-        Bukkit.getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable()
+        if(!(blockMaterial == Material.STONE_SLAB2 || blockMaterial == Material.DOUBLE_STONE_SLAB2
+            || blockMaterial == Material.STEP || blockMaterial == Material.DOUBLE_STEP
+            || blockMaterial == Material.WOOD_STEP || blockMaterial == Material.WOOD_DOUBLE_STEP
+            || blockMaterial == Material.SNOW))
         {
-            public void run()
+            Bukkit.getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable()
             {
-                //remove the block placed.
-                block.setType(Material.AIR);
-            }
-        }, 20L * 2L * 3l);
+                public void run()
+                {
+                    //remove the block placed.
+                    block.setType(Material.AIR);
+                    world.playSound(location, Sound.DIG_STONE, 1F, 1F);
+                    world.playEffect(location, Effect.TILE_BREAK, block);
+
+                }
+            }, 20L * 2L * 3l);
+        }
+        else
+            player.sendMessage(ChatColor.RED + "Sorry, but you cannot place this material.");
     }
 }
