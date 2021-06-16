@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="ok please" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="particle remove :(">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_8_8_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_06_21,_9_22_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_06_21__9_22_AM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +63,6 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -106,8 +111,7 @@
       <workItem from="1623709087409" duration="8490000" />
       <workItem from="1623792476031" duration="4886000" />
       <workItem from="1623812104758" duration="890000" />
-      <workItem from="1623825578690" duration="559000" />
-      <workItem from="1623827629768" duration="1027000" />
+      <workItem from="1623884592255" duration="309000" />
     </task>
     <task id="LOCAL-00001" summary="skeet">
       <created>1623195696747</created>
@@ -333,28 +337,7 @@
       <option name="project" value="LOCAL" />
       <updated>1623812351956</updated>
     </task>
-    <task id="LOCAL-00033" summary="random stuff">
-      <created>1623827778210</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1623827778210</updated>
-    </task>
-    <task id="LOCAL-00034" summary="test to see if commit signing works">
-      <created>1623828239209</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1623828239209</updated>
-    </task>
-    <task id="LOCAL-00035" summary="ok please">
-      <created>1623828383356</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1623828383356</updated>
-    </task>
-    <option name="localTasksCounter" value="36" />
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +357,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="re-add a listener class i deleted without committing, it's a temp class" />
+    <MESSAGE value="update artifactid" />
+    <MESSAGE value="bofa" />
     <MESSAGE value="add armor prep + todo" />
     <MESSAGE value="reformat + still adding armor event" />
     <MESSAGE value="fix comments lmao" />
@@ -396,13 +382,6 @@
     <MESSAGE value="pog" />
     <MESSAGE value="various non-code updates" />
     <MESSAGE value="fix pom" />
-    <MESSAGE value="random stuff" />
-    <MESSAGE value="test to see if commit signing works" />
-    <MESSAGE value="ok please" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok please" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <option name="LAST_COMMIT_MESSAGE" value="fix pom" />
   </component>
 </project>
