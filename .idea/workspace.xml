@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="test to see if commit signing works" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="ok please" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +107,7 @@
       <workItem from="1623792476031" duration="4886000" />
       <workItem from="1623812104758" duration="890000" />
       <workItem from="1623825578690" duration="559000" />
-      <workItem from="1623827629768" duration="676000" />
+      <workItem from="1623827629768" duration="1027000" />
     </task>
     <task id="LOCAL-00001" summary="skeet">
       <created>1623195696747</created>
@@ -347,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623828239209</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="ok please">
+      <created>1623828383356</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623828383356</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +374,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="bofa" />
     <MESSAGE value="add armor prep + todo" />
     <MESSAGE value="reformat + still adding armor event" />
     <MESSAGE value="fix comments lmao" />
@@ -392,7 +398,8 @@
     <MESSAGE value="fix pom" />
     <MESSAGE value="random stuff" />
     <MESSAGE value="test to see if commit signing works" />
-    <option name="LAST_COMMIT_MESSAGE" value="test to see if commit signing works" />
+    <MESSAGE value="ok please" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok please" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
