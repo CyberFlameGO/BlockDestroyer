@@ -39,7 +39,6 @@ public class EntityDamageByEntityListener implements Listener {
                     || attackItemMaterial == Material.STONE_HOE || attackItemMaterial == Material.IRON_HOE
                     || attackItemMaterial == Material.DIAMOND_HOE) {
                 short attackItemDurability = attacker.getItemInHand().getDurability();
-                Damageable damageableMeta = (Damageable) attackItem.getItemMeta();
                 int maxUses = attackItem.getType().getMaxDurability();
                 int durability = maxUses + 1 - attackItem.getDurability();
 

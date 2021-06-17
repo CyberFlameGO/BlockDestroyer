@@ -1,12 +1,14 @@
+net/cyberflame/kpm/listeners/ProjectileLaunchListener.class
 net/cyberflame/kpm/commands/BuildModeCommand.class
 net/cyberflame/kpm/listeners/ArmorListener.class
 net/cyberflame/kpm/listeners/PlayerDeathListener.class
 net/cyberflame/kpm/listeners/PlayerBlockPlaceListener.class
+net/cyberflame/kpm/listeners/ProjectileHitListener.class
 net/cyberflame/kpm/KPM.class
 net/cyberflame/kpm/listeners/PlayerBlockPlaceListener$1.class
 net/cyberflame/kpm/listeners/EntityDamageByEntityListener.class
+net/cyberflame/kpm/listeners/PlayerTeleportListener.class
 net/cyberflame/kpm/listeners/PlayerUnequipListener.class
-net/cyberflame/kpm/listeners/PlayerProjectileLandListener.class
 net/cyberflame/kpm/utils/Zone.class
 net/cyberflame/kpm/events/ArmorEquipEvent$EquipMethod.class
 net/cyberflame/kpm/events/ArmorEquipEvent.class
