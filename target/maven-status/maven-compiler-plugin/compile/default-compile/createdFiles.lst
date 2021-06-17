@@ -7,6 +7,7 @@ net/cyberflame/kpm/listeners/PlayerBlockPlaceListener$1.class
 net/cyberflame/kpm/listeners/EntityDamageByEntityListener.class
 net/cyberflame/kpm/listeners/PlayerUnequipListener.class
 net/cyberflame/kpm/listeners/PlayerProjectileLandListener.class
+net/cyberflame/kpm/utils/Zone.class
 net/cyberflame/kpm/events/ArmorEquipEvent$EquipMethod.class
 net/cyberflame/kpm/events/ArmorEquipEvent.class
 net/cyberflame/kpm/listeners/PlayerSoupListener.class
@@ -16,3 +17,4 @@ net/cyberflame/kpm/listeners/PlayerSoupListener$1.class
 net/cyberflame/kpm/listeners/PlayerPotionConsumeListener.class
 net/cyberflame/kpm/listeners/PlayerPotionConsumeListener$1.class
 net/cyberflame/kpm/utils/StringUtils.class
+net/cyberflame/kpm/utils/ZoneVector.class

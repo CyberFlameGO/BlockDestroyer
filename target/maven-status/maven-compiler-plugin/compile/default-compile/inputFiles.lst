@@ -1,4 +1,5 @@
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java
+/Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/ZoneVector.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerSoupListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerUnequipListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java
@@ -11,4 +12,5 @@
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/KPM.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/commands/BuildModeCommand.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/ArmorType.java
+/Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/Zone.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/ArmorListener.java
