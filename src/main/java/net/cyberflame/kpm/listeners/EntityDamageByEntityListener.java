@@ -17,21 +17,31 @@ public class EntityDamageByEntityListener implements Listener
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void onEntityDamageByEntity(EntityDamageByEntityEvent e)
     {
-        if (e.getDamager() instanceof Player && e.getEntity() instanceof Player)
+        if (e.getDamager() instanceof Player)
         {
             Player attacker = (Player) e.getDamager();
-            Material attackItem = attacker.getItemInHand().getType();
-            if (attacker.hasPotionEffect(PotionEffectType.INVISIBILITY))
+            ItemStack attackItem = attacker.getItemInHand();
+            Material attackItemMaterial = attackItem.getType();
+            if (attacker.hasPotionEffect(PotionEffectType.INVISIBILITY) && e.getEntity() instanceof Player)
             {
                 attacker.removePotionEffect(PotionEffectType.INVISIBILITY);
             }
-            else if (attackItem == Material.WOOD_HOE || attackItem == Material.GOLD_HOE
-                    || attackItem == Material.STONE_HOE || attackItem == Material.IRON_HOE
-                    || attackItem == Material.DIAMOND_HOE)
+            if (attackItemMaterial == Material.WOOD_HOE || attackItemMaterial == Material.GOLD_HOE
+                    || attackItemMaterial == Material.STONE_HOE || attackItemMaterial == Material.IRON_HOE
+                    || attackItemMaterial == Material.DIAMOND_HOE)
             {
-
+                int attackItemDurability = attacker.getItemInHand().getDurability();
+                if (attackItemDurability != 0)
+                {
+                    attacker.getItemInHand().setDurability((short) (attackItemDurability - 1));
+                }
+                else
+                {
+                    attacker.setItemInHand(new ItemStack(Material.AIR));
+                }
             }
-        } else if (e.getDamager() instanceof Snowball)
+        }
+        if (e.getDamager() instanceof Snowball)
             if (e.getEntity() instanceof Player)
             {
                 Player victim = (Player) e.getEntity();
