@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -29,13 +30,14 @@ public class KPM extends JavaPlugin
         enabledBuild = new HashMap<UUID, Boolean>();
         disabledworlds = this.getConfig().getStringList("disabled-worlds");
         saveDefaultConfig();
+        saveResource("config.yml", false);
 
         PluginManager pm = Bukkit.getPluginManager();
 
         Bukkit.getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
         pm.registerEvents(new PlayerBlockPlaceListener(this), this);
         pm.registerEvents(new PlayerDeathListener(), this);
-        pm.registerEvents(new EntityDamageByEntityListener(), this);
+        pm.registerEvents(new EntityDamageByEntityListener(this), (Plugin)this);
         pm.registerEvents(new PlayerJoinListener(), this);
         pm.registerEvents(new PlayerProjectileLandListener(), this);
         pm.registerEvents(new PlayerPotionConsumeListener(), this);

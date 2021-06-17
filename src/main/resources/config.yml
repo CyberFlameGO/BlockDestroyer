@@ -55,3 +55,9 @@ blocked:
   - DAYLIGHT_DETECTOR_INVERTED
   - DAYLIGHT_DETECTOR
   - ANVIL
+
+# Bow fix settings
+settings:
+  reduce-damage: 25.0 # Reduce damage by this percent (e.g. 100.0 - bow boosting doesn't cause damage).
+  velocity-multiplier: 2.5 # The higher the velocity multiplier the further the player will travel.
+  punch-only: false # Should bow boosting only work for punch bows?

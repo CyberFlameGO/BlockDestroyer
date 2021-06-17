@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="stuff">
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="build files i guess">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/Zone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ZoneVector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +71,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KPM [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -108,7 +125,7 @@
       <workItem from="1623709087409" duration="8490000" />
       <workItem from="1623792476031" duration="4886000" />
       <workItem from="1623812104758" duration="890000" />
-      <workItem from="1623884592255" duration="1500000" />
+      <workItem from="1623884592255" duration="3484000" />
     </task>
     <task id="LOCAL-00001" summary="skeet">
       <created>1623195696747</created>
@@ -341,7 +358,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623884910804</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add more to edbe listener">
+      <created>1623890996687</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1623890996687</updated>
+    </task>
+    <task id="LOCAL-00035" summary="build files i guess">
+      <created>1623891053745</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623891053745</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,8 +392,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update artifactid" />
-    <MESSAGE value="bofa" />
     <MESSAGE value="add armor prep + todo" />
     <MESSAGE value="reformat + still adding armor event" />
     <MESSAGE value="fix comments lmao" />
@@ -386,6 +415,8 @@
     <MESSAGE value="various non-code updates" />
     <MESSAGE value="fix pom" />
     <MESSAGE value="stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="stuff" />
+    <MESSAGE value="add more to edbe listener" />
+    <MESSAGE value="build files i guess" />
+    <option name="LAST_COMMIT_MESSAGE" value="build files i guess" />
   </component>
 </project>
