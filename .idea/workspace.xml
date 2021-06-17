@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_8_8_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_8_8_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_8_8_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021_9_12_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021_9_12_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_21__10_15_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_21__10_15_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_21__8_35_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_21__8_35_AM__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="more on potioneffect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +57,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -73,13 +69,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,7 +124,8 @@
       <workItem from="1623792476031" duration="507000" />
       <workItem from="1623896903741" duration="402000" />
       <workItem from="1623897520976" duration="2000" />
-      <workItem from="1623897686395" duration="1551000" />
+      <workItem from="1623897686395" duration="1794000" />
+      <workItem from="1623968429714" duration="2089000" />
     </task>
     <task id="LOCAL-00001" summary="skeet">
       <created>1623195696747</created>
@@ -317,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623722165967</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="more on potioneffect">
+      <created>1623899487105</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1623899487105</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +343,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="deez nuts" />
     <MESSAGE value="skeet" />
     <MESSAGE value="hmmmmmm" />
     <MESSAGE value="re-add a listener class i deleted without committing, it's a temp class" />
@@ -362,6 +367,7 @@
     <MESSAGE value="add more functionality" />
     <MESSAGE value="clean" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="more on potioneffect" />
+    <option name="LAST_COMMIT_MESSAGE" value="more on potioneffect" />
   </component>
 </project>

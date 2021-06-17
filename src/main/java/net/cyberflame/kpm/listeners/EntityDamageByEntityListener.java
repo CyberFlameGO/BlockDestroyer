@@ -27,8 +27,10 @@ public class EntityDamageByEntityListener implements Listener {
     }
 
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
-    public void onEntityDamageByEntity(EntityDamageByEntityEvent e) {
-        if (e.getDamager() instanceof Player) {
+    public void onEntityDamageByEntity(EntityDamageByEntityEvent e)
+    {
+        if (e.getDamager() instanceof Player)
+        {
             Player attacker = (Player) e.getDamager();
             ItemStack attackItem = attacker.getItemInHand();
             Material attackItemMaterial = attackItem.getType();
@@ -38,7 +40,7 @@ public class EntityDamageByEntityListener implements Listener {
             if (attackItemMaterial == Material.WOOD_HOE || attackItemMaterial == Material.GOLD_HOE
                     || attackItemMaterial == Material.STONE_HOE || attackItemMaterial == Material.IRON_HOE
                     || attackItemMaterial == Material.DIAMOND_HOE) {
-                short attackItemDurability = attacker.getItemInHand().getDurability();
+                short attackItemDurability = attackItem.getDurability();
                 int maxUses = attackItem.getType().getMaxDurability();
                 int durability = maxUses + 1 - attackItem.getDurability();
 
