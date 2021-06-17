@@ -7,6 +7,7 @@ import java.util.UUID;
 
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
+import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -39,12 +40,17 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new PlayerDeathListener(), this);
         pm.registerEvents(new EntityDamageByEntityListener(this), (Plugin)this);
         pm.registerEvents(new PlayerJoinListener(), this);
-        pm.registerEvents(new PlayerProjectileLandListener(), this);
+        pm.registerEvents(new ProjectileHitListener(), this);
+        pm.registerEvents(new ProjectileLaunchListener(), this);
         pm.registerEvents(new PlayerPotionConsumeListener(), this);
-        pm.registerEvents(new PlayerUnequipListener(), this);
         pm.registerEvents(new PlayerSoupListener(), this);
+        pm.registerEvents(new PlayerTeleportListener(), this);
+        pm.registerEvents(new PlayerUnequipListener(), this);
+        System.out.println("[KPM] Registered events successfully.");
 
-        System.out.println("[KPM] Loaded");
+        final CommandSender console = (CommandSender)this.getServer().getConsoleSender();
+        console.sendMessage("Plugin enabled successfully!");
+        console.sendMessage("Version: " + this.getDescription().getVersion());
     }
 
     public static KPM getInstance()
@@ -80,5 +86,10 @@ public class KPM extends JavaPlugin
                 return true;
             }
         return false;
+    }
+    public void onDisable()
+    {
+        final CommandSender console = (CommandSender)this.getServer().getConsoleSender();
+        console.sendMessage("KPM disabled.");
     }
 }

@@ -12,7 +12,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.util.BlockIterator;
 
-public class PlayerProjectileLandListener implements Listener
+public class ProjectileHitListener implements Listener
 {
     @EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)
     public void ProjectileHit(ProjectileHitEvent event)
