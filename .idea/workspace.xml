@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="files">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileLaunchListener.java" afterDir="false" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_8_8_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_8_8_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_8_8_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021_9_12_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021_9_12_AM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_21__10_15_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_21__10_15_AM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_21__8_35_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_21__8_35_AM__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerProjectileLandListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileHitListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/KPM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerProjectileLandListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,15 +73,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -124,9 +123,10 @@
       <workItem from="1623115809073" duration="725000" />
       <workItem from="1623116752574" duration="1520000" />
       <workItem from="1623709087409" duration="8490000" />
-      <workItem from="1623792476031" duration="4886000" />
-      <workItem from="1623812104758" duration="890000" />
-      <workItem from="1623884592255" duration="4992000" />
+      <workItem from="1623792476031" duration="507000" />
+      <workItem from="1623896903741" duration="402000" />
+      <workItem from="1623897520976" duration="2000" />
+      <workItem from="1623897686395" duration="1551000" />
     </task>
     <task id="LOCAL-00001" summary="skeet">
       <created>1623195696747</created>
@@ -317,77 +317,7 @@
       <option name="project" value="LOCAL" />
       <updated>1623722165967</updated>
     </task>
-    <task id="LOCAL-00028" summary="update">
-      <created>1623794492990</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1623794492990</updated>
-    </task>
-    <task id="LOCAL-00029" summary="pog">
-      <created>1623811034206</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1623811034206</updated>
-    </task>
-    <task id="LOCAL-00030" summary="various non-code updates">
-      <created>1623811440486</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1623811440486</updated>
-    </task>
-    <task id="LOCAL-00031" summary="fix pom">
-      <created>1623811738765</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1623811738765</updated>
-    </task>
-    <task id="LOCAL-00032" summary="fix pom">
-      <created>1623812351956</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1623812351956</updated>
-    </task>
-    <task id="LOCAL-00033" summary="stuff">
-      <created>1623884910804</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1623884910804</updated>
-    </task>
-    <task id="LOCAL-00034" summary="add more to edbe listener">
-      <created>1623890996687</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1623890996687</updated>
-    </task>
-    <task id="LOCAL-00035" summary="build files i guess">
-      <created>1623891053745</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1623891053745</updated>
-    </task>
-    <task id="LOCAL-00036" summary="bowfix and more">
-      <created>1623894647658</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1623894647658</updated>
-    </task>
-    <task id="LOCAL-00037" summary="files">
-      <created>1623894672121</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1623894672121</updated>
-    </task>
-    <option name="localTasksCounter" value="38" />
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,6 +337,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="deez nuts" />
+    <MESSAGE value="skeet" />
+    <MESSAGE value="hmmmmmm" />
+    <MESSAGE value="re-add a listener class i deleted without committing, it's a temp class" />
+    <MESSAGE value="update artifactid" />
+    <MESSAGE value="bofa" />
+    <MESSAGE value="add armor prep + todo" />
+    <MESSAGE value="reformat + still adding armor event" />
     <MESSAGE value="fix comments lmao" />
     <MESSAGE value="an attempt at fixing messy code" />
     <MESSAGE value="add soup" />
@@ -424,14 +362,6 @@
     <MESSAGE value="add more functionality" />
     <MESSAGE value="clean" />
     <MESSAGE value="update" />
-    <MESSAGE value="pog" />
-    <MESSAGE value="various non-code updates" />
-    <MESSAGE value="fix pom" />
-    <MESSAGE value="stuff" />
-    <MESSAGE value="add more to edbe listener" />
-    <MESSAGE value="build files i guess" />
-    <MESSAGE value="bowfix and more" />
-    <MESSAGE value="files" />
-    <option name="LAST_COMMIT_MESSAGE" value="files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
