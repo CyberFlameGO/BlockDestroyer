@@ -8,11 +8,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerItemConsumeEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class PlayerPotionConsumeListener implements Listener
+public class PlayerItemConsumeListener implements Listener
 {
     private KPM plugin;
 
-    public PlayerPotionConsumeListener()
+    public PlayerItemConsumeListener()
     {
         plugin = KPM.getPlugin(KPM.class);
     }

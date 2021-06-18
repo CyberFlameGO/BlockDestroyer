@@ -36,16 +36,18 @@ public class KPM extends JavaPlugin
         PluginManager pm = Bukkit.getPluginManager();
 
         Bukkit.getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
-        pm.registerEvents(new PlayerBlockPlaceListener(this), this);
-        pm.registerEvents(new PlayerDeathListener(), this);
+        pm.registerEvents(new BlockPlaceListener(this), this);
         pm.registerEvents(new EntityDamageByEntityListener(this), (Plugin)this);
-        pm.registerEvents(new PlayerJoinListener(), this);
-        pm.registerEvents(new ProjectileHitListener(), this);
-        pm.registerEvents(new ProjectileLaunchListener(), this);
-        pm.registerEvents(new PlayerPotionConsumeListener(), this);
+        pm.registerEvents(new PlayerDeathListener(), this);
+        pm.registerEvents(new PlayerDropItemListener(), this);
+        pm.registerEvents(new PlayerItemConsumeListener(), this);
+        pm.registerEvents(new PlayerInteractAtEntityListener(), this);
         pm.registerEvents(new PlayerInteractListener(), this);
+        pm.registerEvents(new PlayerJoinListener(), this);
         pm.registerEvents(new PlayerTeleportListener(), this);
         pm.registerEvents(new PlayerUnequipListener(), this);
+        pm.registerEvents(new ProjectileHitListener(), this);
+        pm.registerEvents(new ProjectileLaunchListener(), this);
         System.out.println("[KPM] Registered events successfully.");
 
         final CommandSender console = (CommandSender)this.getServer().getConsoleSender();

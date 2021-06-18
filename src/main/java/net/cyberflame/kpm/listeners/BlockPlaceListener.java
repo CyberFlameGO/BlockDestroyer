@@ -10,12 +10,12 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
-public class PlayerBlockPlaceListener implements Listener
+public class BlockPlaceListener implements Listener
 {
 
     private KPM plugin;
 
-    public PlayerBlockPlaceListener(KPM plugin)
+    public BlockPlaceListener(KPM plugin)
     {
         this.plugin = plugin;
     }
