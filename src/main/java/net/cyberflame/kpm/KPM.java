@@ -43,7 +43,7 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new ProjectileHitListener(), this);
         pm.registerEvents(new ProjectileLaunchListener(), this);
         pm.registerEvents(new PlayerPotionConsumeListener(), this);
-        pm.registerEvents(new PlayerSoupListener(), this);
+        pm.registerEvents(new PlayerInteractListener(), this);
         pm.registerEvents(new PlayerTeleportListener(), this);
         pm.registerEvents(new PlayerUnequipListener(), this);
         System.out.println("[KPM] Registered events successfully.");

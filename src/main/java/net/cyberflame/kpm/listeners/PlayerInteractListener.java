@@ -13,11 +13,11 @@ import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class PlayerSoupListener implements Listener
+public class PlayerInteractListener implements Listener
 {
     private KPM plugin;
 
-    public PlayerSoupListener() {
+    public PlayerInteractListener() {
         plugin = KPM.getPlugin(KPM.class);
     }
 
