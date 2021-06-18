@@ -34,6 +34,6 @@ public class PlayerDeathListener implements Listener
         for (PotionEffect pe : this.playerMap.get(p.getName()))
             potionMeta.addCustomEffect(pe, true);
         potion.setItemMeta(potionMeta);
-        w.dropItemNaturally(p.getLocation(), potion);
+        w.dropItemNaturally(l, potion);
     }
 }
