@@ -34,7 +34,8 @@ public class EntityDamageByEntityListener implements Listener {
             Player attacker = (Player) e.getDamager();
             ItemStack attackItem = attacker.getItemInHand();
             Material attackItemMaterial = attackItem.getType();
-            if (attacker.hasPotionEffect(PotionEffectType.INVISIBILITY) && e.getEntity() instanceof Player) {
+            if (attacker.hasPotionEffect(PotionEffectType.INVISIBILITY) && e.getEntity() instanceof Player)
+            {
                 attacker.removePotionEffect(PotionEffectType.INVISIBILITY);
             }
 
@@ -52,11 +53,13 @@ public class EntityDamageByEntityListener implements Listener {
         }
 
         if (e.getDamager() instanceof Snowball)
-            if (e.getEntity() instanceof Player) {
+            if (e.getEntity() instanceof Player)
+            {
                 Player victim = (Player) e.getEntity();
                 ProjectileSource ps = ((Snowball) e.getDamager()).getShooter();
 
-                if (ps instanceof Player) {
+                if (ps instanceof Player)
+                {
                     victim.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 20 * 10, 1));
                 }
             }
@@ -70,13 +73,16 @@ public class EntityDamageByEntityListener implements Listener {
             {
                 ItemStack item = p.getItemInHand();
                 if (this.KPM.getConfig().getBoolean("settings.punch-only", false)
-                        && !item.containsEnchantment(Enchantment.ARROW_KNOCKBACK)) {
+                        && !item.containsEnchantment(Enchantment.ARROW_KNOCKBACK))
+                {
                     return;
                 }
                 if (this.KPM.getConfig().getBoolean("settings.punch-only", true)
-                        && item.containsEnchantment(Enchantment.ARROW_KNOCKBACK)) {
+                        && item.containsEnchantment(Enchantment.ARROW_KNOCKBACK))
+                {
                     int enchLevel = item.getEnchantmentLevel(Enchantment.ARROW_KNOCKBACK);
-                    if (enchLevel != 2) {
+                    if (enchLevel != 2)
+                    {
                         return;
                     }
                 }

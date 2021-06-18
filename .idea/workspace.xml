@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="HMMM">
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="full build">
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -409,7 +409,21 @@
       <option name="project" value="LOCAL" />
       <updated>1623979288430</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="finally">
+      <created>1623980180413</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1623980180413</updated>
+    </task>
+    <task id="LOCAL-00043" summary="full build">
+      <created>1623980266315</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1623980266315</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,8 +443,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="run maven clean goal" />
-    <MESSAGE value="???" />
     <MESSAGE value="git is confusing sometimes lol" />
     <MESSAGE value="git is confusing sometimes lol pt. 2" />
     <MESSAGE value="refactor: rename `command` to `commands`" />
@@ -454,6 +466,8 @@
     <MESSAGE value="dammit" />
     <MESSAGE value="perhaps it's this" />
     <MESSAGE value="HMMM" />
-    <option name="LAST_COMMIT_MESSAGE" value="HMMM" />
+    <MESSAGE value="finally" />
+    <MESSAGE value="full build" />
+    <option name="LAST_COMMIT_MESSAGE" value="full build" />
   </component>
 </project>
