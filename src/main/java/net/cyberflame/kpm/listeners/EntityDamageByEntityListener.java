@@ -44,7 +44,7 @@ public class EntityDamageByEntityListener implements Listener {
                 int maxUses = attackItem.getType().getMaxDurability();
                 int durability = maxUses + 1 - attackItemDurability;
 
-                if (durability != 0) {
+                if (durability != maxUses) {
                     attacker.getInventory().getItemInHand().setDurability((short) (durability + 1));
                 } else {
                     attacker.setItemInHand(new ItemStack(Material.AIR));
