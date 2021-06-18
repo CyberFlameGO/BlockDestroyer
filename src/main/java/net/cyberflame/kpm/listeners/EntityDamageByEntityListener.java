@@ -37,15 +37,17 @@ public class EntityDamageByEntityListener implements Listener {
             if (attacker.hasPotionEffect(PotionEffectType.INVISIBILITY) && e.getEntity() instanceof Player) {
                 attacker.removePotionEffect(PotionEffectType.INVISIBILITY);
             }
+
             if (attackItemMaterial == Material.WOOD_HOE || attackItemMaterial == Material.GOLD_HOE
                     || attackItemMaterial == Material.STONE_HOE || attackItemMaterial == Material.IRON_HOE
                     || attackItemMaterial == Material.DIAMOND_HOE) {
                 short attackItemDurability = attackItem.getDurability();
-                int maxUses = attackItem.getType().getMaxDurability();
+                int maxUses = attackItemMaterial.getMaxDurability();
                 int durability = maxUses + 1 - attackItemDurability;
+                System.out.println("aIDshort" + attackItemDurability + "mU" + maxUses + "dura" + durability);
 
                 if (durability != maxUses) {
-                    attacker.getInventory().getItemInHand().setDurability((short) (durability + 1));
+                    attacker.getInventory().getItemInHand().setDurability((short) (attackItemDurability + 1));
                 } else {
                     attacker.setItemInHand(new ItemStack(Material.AIR));
                 }
