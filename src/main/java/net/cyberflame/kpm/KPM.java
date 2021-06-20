@@ -1,35 +1,51 @@
 package net.cyberflame.kpm;
 
+import net.cyberflame.kpm.commands.BuildModeCommand;
+import net.cyberflame.kpm.listeners.*;
+import org.bukkit.Bukkit;
+import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.PluginManager;
+import org.bukkit.plugin.java.JavaPlugin;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import net.cyberflame.kpm.listeners.*;
-import org.bukkit.Bukkit;
-import org.bukkit.command.CommandSender;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.PluginManager;
-import org.bukkit.plugin.java.JavaPlugin;
-
-import net.cyberflame.kpm.commands.BuildModeCommand;
-
 public class KPM extends JavaPlugin
 {
 
     private static KPM plugin;
-    private static List<String> disabledworlds;
+    private static List<String> disabledWorlds;
     private static Map<UUID, Boolean> enabledBuild;
+
+    public static KPM getInstance()
+    {
+        return plugin;
+    }
+
+    public static List<String> getDisabledWorlds()
+    {
+        return disabledWorlds;
+    }
+
+    /**
+     * @return
+     */
+    public static Map<UUID, Boolean> getEnabledBuild()
+    {
+        return enabledBuild;
+    }
 
     @Override
     public void onEnable()
     {
-        this.plugin = this;
+        plugin = this;
         this.getConfig().options().copyDefaults(true);
         this.saveConfig();
         this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
         enabledBuild = new HashMap<UUID, Boolean>();
-        disabledworlds = this.getConfig().getStringList("disabled-worlds");
+        disabledWorlds = this.getConfig().getStringList("disabled-worlds");
         saveDefaultConfig();
         saveResource("config.yml", false);
 
@@ -37,7 +53,7 @@ public class KPM extends JavaPlugin
 
         Bukkit.getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
         pm.registerEvents(new BlockPlaceListener(this), this);
-        pm.registerEvents(new EntityDamageByEntityListener(this), (Plugin)this);
+        pm.registerEvents(new EntityDamageByEntityListener(this), this);
         //pm.registerEvents(new PlayerDeathListener(), this);
         pm.registerEvents(new PlayerDropItemListener(), this);
         pm.registerEvents(new PlayerItemConsumeListener(), this);
@@ -50,24 +66,9 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new ProjectileLaunchListener(), this);
         System.out.println("[KPM] Registered events successfully.");
 
-        final CommandSender console = (CommandSender)this.getServer().getConsoleSender();
+        final CommandSender console = this.getServer().getConsoleSender();
         console.sendMessage("Plugin enabled successfully!");
         console.sendMessage("Version: " + this.getDescription().getVersion());
-    }
-
-    public static KPM getInstance()
-    {
-        return plugin;
-    }
-
-    public static List<String> getDisabledWorlds()
-    {
-        return disabledworlds;
-    }
-
-    public static Map<UUID, Boolean> getEnabledBuild()
-    {
-        return enabledBuild;
     }
 
     public void setBuildEnabled(UUID uuid)
@@ -83,15 +84,14 @@ public class KPM extends JavaPlugin
 
     public boolean getBuildEnabled(UUID uuid)
     {
-        if (enabledBuild.get(uuid) != null)
-            {
-                return true;
-            }
-        return false;
+        return enabledBuild.get(uuid) != null;
     }
+
+    @Override
     public void onDisable()
     {
-        final CommandSender console = (CommandSender)this.getServer().getConsoleSender();
+        final CommandSender console = this.getServer().getConsoleSender();
         console.sendMessage("KPM disabled.");
+        System.out.println(getEnabledBuild());
     }
 }
