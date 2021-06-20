@@ -38,7 +38,7 @@ public class KPM extends JavaPlugin
         Bukkit.getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
         pm.registerEvents(new BlockPlaceListener(this), this);
         pm.registerEvents(new EntityDamageByEntityListener(this), (Plugin)this);
-        pm.registerEvents(new PlayerDeathListener(), this);
+        //pm.registerEvents(new PlayerDeathListener(), this);
         pm.registerEvents(new PlayerDropItemListener(), this);
         pm.registerEvents(new PlayerItemConsumeListener(), this);
         pm.registerEvents(new PlayerInteractAtEntityListener(), this);
