@@ -14,7 +14,7 @@ public class SplashPotionSpeedCommand implements CommandExecutor
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
     {
-        if (sender.hasPermission(KPM.get().getConfig().get("permission").toString()))
+        if (sender.hasPermission(KPM.getPlugin().getConfig().get("permission").toString()))
             {
                 if (args.length == 0)
                     {
@@ -24,7 +24,7 @@ public class SplashPotionSpeedCommand implements CommandExecutor
                     {
                         if (args[0].equals("get"))
                             {
-                                sender.sendMessage("§aSplashPotionSpeed values: " + KPM.get().getSPSValue());
+                                sender.sendMessage("§aSplashPotionSpeed values: " + KPM.getPlugin().getSPSValue());
                             }
                         else if (args[0].equals("set"))
                             {
@@ -40,7 +40,7 @@ public class SplashPotionSpeedCommand implements CommandExecutor
 
                                         sender.sendMessage("§aSplashPotionSpeed of " + Bukkit.getServerName() + " set to " + arg +
                                                            ".");
-                                        KPM.get().setSPSTo(arg);
+                                        KPM.getPlugin().setSPSTo(arg);
                                     }
                                 else
                                     {

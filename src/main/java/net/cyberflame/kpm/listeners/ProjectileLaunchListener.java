@@ -9,7 +9,7 @@ import org.bukkit.util.Vector;
 public class ProjectileLaunchListener implements Listener
 {
 
-    private Double splashPotSpeed = KPM.get().getConfig().getDouble("splashPotSpeed");
+    private Double splashPotSpeed = KPM.getPlugin().getConfig().getDouble("splashPotSpeed");
 
     @SuppressWarnings("deprecation")
     @EventHandler

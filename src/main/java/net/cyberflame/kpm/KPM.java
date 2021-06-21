@@ -2,17 +2,23 @@ package net.cyberflame.kpm;
 
 import net.cyberflame.kpm.commands.BuildModeCommand;
 import net.cyberflame.kpm.commands.KPMCommand;
+import net.cyberflame.kpm.commands.PingCommand;
 import net.cyberflame.kpm.commands.SplashPotionSpeedCommand;
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.regex.Pattern;
 
 public class KPM extends JavaPlugin
 {
@@ -20,13 +26,19 @@ public class KPM extends JavaPlugin
     private static KPM plugin;
     private static List<String> disabledWorlds;
     private static Map<UUID, Boolean> enabledBuild;
+    public Field fieldPlayerConnection;
+    public Method sendPacket;
+    public Constructor<?> packetVelocity;
+    public String craftBukkitVersion;
+    public double horMultiplier = 1D;
+    public double verMultiplier = 1D;
 
     public static KPM getInstance()
     {
         return plugin;
     }
 
-    public static KPM get() {
+    public static KPM getPlugin() {
         return plugin;
     }
 
@@ -51,9 +63,16 @@ public class KPM extends JavaPlugin
         getConfig().options().copyDefaults(true);
         getConfig().addDefault("potionfall", 1.0);
         getConfig().addDefault("permission", "potionfall.command");
+        getConfig().addDefault("knockback-multiplier.horizontal", 1D);
+        getConfig().addDefault("knockback-multiplier.vertical", 1D);
         saveConfig();
         this.getConfig().options().copyDefaults(true);
         this.saveConfig();
+
+        this.craftBukkitVersion = Bukkit.getServer().getClass().getPackage().getName().split("\\.")[3];
+        this.horMultiplier = getConfig().getDouble("knockback-multiplier.horizontal");
+        this.verMultiplier = getConfig().getDouble("knockback-multiplier.vertical");
+
         enabledBuild = new HashMap<UUID, Boolean>();
         disabledWorlds = this.getConfig().getStringList("disabled-worlds");
         saveDefaultConfig();
@@ -78,15 +97,18 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new EntityDamageByEntityListener(this), this);
         //pm.registerEvents(new PlayerDeathListener(), this);
         pm.registerEvents(new PlayerDropItemListener(), this);
-        pm.registerEvents(new PlayerItemConsumeListener(), this);
         pm.registerEvents(new PlayerInteractAtEntityListener(), this);
         pm.registerEvents(new PlayerInteractListener(), this);
+        pm.registerEvents(new PlayerItemConsumeListener(), this);;
         pm.registerEvents(new PlayerJoinListener(), this);
         pm.registerEvents(new PlayerQuitListener(), this);
         pm.registerEvents(new PlayerTeleportListener(), this);
         pm.registerEvents(new PlayerUnequipListener(), this);
+        pm.registerEvents(new PlayerVelocityListener(), this);
+        pm.registerEvents(new PotionSplashListener(), this);
         pm.registerEvents(new ProjectileHitListener(), this);
         pm.registerEvents(new ProjectileLaunchListener(), this);
+
 
         System.out.println("[KPM] Registered events successfully.");
     }
@@ -96,6 +118,7 @@ public class KPM extends JavaPlugin
         this.getCommand("kpm").setExecutor(new KPMCommand());
         this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
         getCommand("splashpotionspeed").setExecutor(new SplashPotionSpeedCommand());
+        getCommand("ping").setExecutor(new PingCommand());
     }
 
     public void setBuildEnabled(UUID uuid)
@@ -133,4 +156,70 @@ public class KPM extends JavaPlugin
         console.sendMessage("KPM disabled.");
         plugin = null;
     }
+
+    public static int getPingReflection(Player player) throws Exception {
+        int ping = 0;
+        Class<?> craftPlayer = Class.forName("org.bukkit.craftbukkit." + getServerVersion() + "entity.CraftPlayer");
+        Object converted = craftPlayer.cast(player);
+        Method handle = converted.getClass().getMethod("getHandle");
+        Object entityPlayer = handle.invoke(converted);
+        Field pingField = entityPlayer.getClass().getField("ping");
+        ping = pingField.getInt(entityPlayer);
+        return ping;
+    }
+
+    public static String getServerVersion() {
+        Pattern brand = Pattern.compile("(v|)[0-9][_.][0-9][_.][R0-9]*");
+        String version = null;
+        String pkg = Bukkit.getServer().getClass().getPackage().getName();
+        String version0 = pkg.substring(pkg.lastIndexOf('.') + 1);
+        if (!brand.matcher(version0).matches()) {
+            version0 = "";
+        }
+        version = version0;
+        return !"".equals(version) ? version + "." : "";
+    }
+
+    public String getCraftBukkitVersion() {
+        return craftBukkitVersion;
+    }
+
+    public double getHorMultiplier() {
+        return horMultiplier;
+    }
+
+    public void setHorMultiplier(double horMultiplier) {
+        this.horMultiplier = horMultiplier;
+    }
+
+    public double getVerMultiplier() {
+        return verMultiplier;
+    }
+
+    public void setVerMultiplier(double verMultiplier) {
+        this.verMultiplier = verMultiplier;
+    }
+
+    public void damageListener() {
+        try {
+            Class<?> entityPlayerClass =
+                    Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
+                                  ".EntityPlayer");
+            Class<?> packetVelocityClass =
+                    Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
+                                  ".PacketPlayOutEntityVelocity");
+            Class<?> playerConnectionClass =
+                    Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
+                                  ".PlayerConnection");
+
+            // Get the fields here to improve performance later on
+            this.fieldPlayerConnection = entityPlayerClass.getField("playerConnection");
+            this.sendPacket = playerConnectionClass.getMethod("sendPacket", packetVelocityClass.getSuperclass());
+            this.packetVelocity = packetVelocityClass.getConstructor(int.class, double.class, double.class, double.class);
+        } catch (ClassNotFoundException | NoSuchFieldException | SecurityException | NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
