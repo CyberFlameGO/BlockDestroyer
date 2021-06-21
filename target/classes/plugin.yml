@@ -7,6 +7,9 @@ permissions:
   kpm.buildmode:
     description: Allows the user to run /buildmode
     default: op
+  kpm.override:
+    description: Allows player to bypass the anti block glitch
+    default: op
 commands:
   buildmode:
     description: Buildmode toggle root command

@@ -1,6 +1,8 @@
 package net.cyberflame.kpm;
 
 import net.cyberflame.kpm.commands.BuildModeCommand;
+import net.cyberflame.kpm.commands.KPMCommand;
+import net.cyberflame.kpm.commands.SplashPotionSpeedCommand;
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
@@ -24,6 +26,11 @@ public class KPM extends JavaPlugin
         return plugin;
     }
 
+    public static KPM get() {
+        return plugin;
+    }
+
+
     public static List<String> getDisabledWorlds()
     {
         return disabledWorlds;
@@ -41,14 +48,29 @@ public class KPM extends JavaPlugin
     public void onEnable()
     {
         plugin = this;
+        getConfig().options().copyDefaults(true);
+        getConfig().addDefault("potionfall", 1.0);
+        getConfig().addDefault("permission", "potionfall.command");
+        saveConfig();
         this.getConfig().options().copyDefaults(true);
         this.saveConfig();
-        this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
         enabledBuild = new HashMap<UUID, Boolean>();
         disabledWorlds = this.getConfig().getStringList("disabled-worlds");
         saveDefaultConfig();
         saveResource("config.yml", false);
 
+        reloadConfig();
+
+        registerListeners();
+        registerCommands();
+
+        final CommandSender console = this.getServer().getConsoleSender();
+        console.sendMessage("Plugin enabled successfully!");
+        console.sendMessage("Version: " + this.getDescription().getVersion());
+    }
+
+    private void registerListeners()
+    {
         PluginManager pm = Bukkit.getPluginManager();
 
         Bukkit.getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
@@ -65,11 +87,15 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new PlayerUnequipListener(), this);
         pm.registerEvents(new ProjectileHitListener(), this);
         pm.registerEvents(new ProjectileLaunchListener(), this);
-        System.out.println("[KPM] Registered events successfully.");
 
-        final CommandSender console = this.getServer().getConsoleSender();
-        console.sendMessage("Plugin enabled successfully!");
-        console.sendMessage("Version: " + this.getDescription().getVersion());
+        System.out.println("[KPM] Registered events successfully.");
+    }
+
+    private void registerCommands()
+    {
+        this.getCommand("kpm").setExecutor(new KPMCommand());
+        this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
+        getCommand("splashpotionspeed").setExecutor(new SplashPotionSpeedCommand());
     }
 
     public void setBuildEnabled(UUID uuid)
@@ -88,11 +114,23 @@ public class KPM extends JavaPlugin
         return enabledBuild.get(uuid) != null;
     }
 
+    public void setSPSTo(Double values) {
+        getConfig().set("splashPotSpeed", values);
+        saveConfig();
+        reloadConfig();
+    }
+
+    public Double getSPSValue() {
+        return getConfig().getDouble("splashPotSpeed");
+    }
+
     @Override
     public void onDisable()
     {
         final CommandSender console = this.getServer().getConsoleSender();
-        console.sendMessage("KPM disabled.");
+
         System.out.println(getEnabledBuild());
+        console.sendMessage("KPM disabled.");
+        plugin = null;
     }
 }

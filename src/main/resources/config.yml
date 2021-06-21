@@ -61,3 +61,7 @@ settings:
   reduce-damage: 25.0 # Reduce damage by this percent (e.g. 100.0 - bow boosting doesn't cause damage).
   velocity-multiplier: 2.5 # The higher the velocity multiplier the further the player will travel.
   punch-only: false # Should bow boosting only work for punch bows?
+
+# Splash potion configuration
+splashPotSpeed: 1.0
+permission: "kpm.spscommand"

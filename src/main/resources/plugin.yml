@@ -4,11 +4,31 @@ main: net.cyberflame.kpm.KPM
 description: KPM is a plugin made by CyberFlame primarily for OuterWorlds. This was updated by StarZorrow (zorurruan) and I thank him very much for his modifications to it as the original was kinda sloppy.
 author: Owner_of_Mojang (CyberFlame)
 permissions:
+  kpm.*:
+    description: KPM root command
+    default: op
+    children:
+      kpm.root: true
+      kpm.buildmode: true
+      kpm.override: true
+      kpm.reload: true
+  kpm.root:
+    description: KPM root
   kpm.buildmode:
     description: Allows the user to run /buildmode
     default: op
+  kpm.override:
+    description: Allows player to bypass the anti block glitch
+    default: op
 commands:
+  kpm:
+    description: KPM command
+    permission: kpm.root
+    usage: /kpm
   buildmode:
-    description: Buildmode toggle root command
+    description: Buildmode toggle command
     permission: kpm.buildmode
     usage: /buildmode
+  splashpotionspeed:
+    description: SplashPotionSpeed commands
+    usage: /splashpotionspeed <get/set> <arguments>
