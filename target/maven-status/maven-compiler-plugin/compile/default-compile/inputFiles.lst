@@ -1,6 +1,7 @@
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerItemConsumeListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/ZoneVector.java
+/Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerQuitListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerUnequipListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerInteractListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerInteractAtEntityListener.java
@@ -14,6 +15,7 @@
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/StringUtils.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/KPM.java
+/Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/BlockChecker.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/commands/BuildModeCommand.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/ArmorType.java
 /Users/cyberflame/IdeaProjects/KPM/src/main/java/net/cyberflame/kpm/utils/Zone.java
