@@ -12,6 +12,9 @@ permissions:
       kpm.buildmode: true
       kpm.override: true
       kpm.reload: true
+      kpm.ping: true
+      kpm.ping.others: true
+      kpm.setknockback: true
   kpm.root:
     description: KPM root
   kpm.buildmode:
@@ -20,11 +23,22 @@ permissions:
   kpm.override:
     description: Allows player to bypass the anti block glitch
     default: op
+  kpm.ping.others:
+    description: Allows access to viewing others' pings
+    default: op
+    children:
+      kpm.ping: true
+  kpm.ping:
+    description: Allows access to /ping
+    default: true
+  kpm.setknockback:
+    description: Allows editing of knockback values
+    default: op
 commands:
   kpm:
     description: KPM command
     permission: kpm.root
-    usage: /kpm
+    usage: /kpm [reload]
   buildmode:
     description: Buildmode toggle command
     permission: kpm.buildmode
@@ -32,3 +46,11 @@ commands:
   splashpotionspeed:
     description: SplashPotionSpeed commands
     usage: /splashpotionspeed <get/set> <arguments>
+  ping:
+    description: Check ping
+    permission: kpm.ping
+    usage: /ping [player]
+  setknockback:
+    description: Set knockback
+    permission: kpm.setknockback
+    aliases: [setkb]

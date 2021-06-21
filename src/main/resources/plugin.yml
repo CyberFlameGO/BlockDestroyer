@@ -14,6 +14,8 @@ permissions:
       kpm.reload: true
       kpm.ping: true
       kpm.ping.others: true
+      kpm.setknockback: true
+      kpm.charfix: true
   kpm.root:
     description: KPM root
   kpm.buildmode:
@@ -29,6 +31,12 @@ permissions:
       kpm.ping: true
   kpm.ping:
     description: Allows access to /ping
+    default: true
+  kpm.setknockback:
+    description: Allows editing of knockback values
+    default: op
+  kpm.charfix:
+    description: Fix glitching character
     default: true
 commands:
   kpm:
@@ -46,3 +54,10 @@ commands:
     description: Check ping
     permission: kpm.ping
     usage: /ping [player]
+  setknockback:
+    description: Set knockback
+    permission: kpm.setknockback
+    aliases: [setkb]
+  characterfix:
+    description: Fix character
+    permission: kpm.charfix

@@ -1,15 +1,15 @@
 package net.cyberflame.kpm;
 
-import net.cyberflame.kpm.commands.BuildModeCommand;
-import net.cyberflame.kpm.commands.KPMCommand;
-import net.cyberflame.kpm.commands.PingCommand;
-import net.cyberflame.kpm.commands.SplashPotionSpeedCommand;
+import net.cyberflame.kpm.commands.*;
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -26,6 +26,8 @@ public class KPM extends JavaPlugin
     private static KPM plugin;
     private static List<String> disabledWorlds;
     private static Map<UUID, Boolean> enabledBuild;
+    public BukkitTask autoFix;
+
     public Field fieldPlayerConnection;
     public Method sendPacket;
     public Constructor<?> packetVelocity;
@@ -80,6 +82,11 @@ public class KPM extends JavaPlugin
 
         reloadConfig();
 
+        if (getConfig().getBoolean("auto-fix"))
+            {
+                autoFix();
+            }
+
         registerListeners();
         registerCommands();
 
@@ -109,7 +116,6 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new ProjectileHitListener(), this);
         pm.registerEvents(new ProjectileLaunchListener(), this);
 
-
         System.out.println("[KPM] Registered events successfully.");
     }
 
@@ -119,6 +125,8 @@ public class KPM extends JavaPlugin
         this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
         getCommand("splashpotionspeed").setExecutor(new SplashPotionSpeedCommand());
         getCommand("ping").setExecutor(new PingCommand());
+        getCommand("setknockback").setExecutor(new SetKnockbackCommand());
+        getCommand("characterfix").setExecutor(new CharacterFixCommand());
     }
 
     public void setBuildEnabled(UUID uuid)
@@ -219,6 +227,33 @@ public class KPM extends JavaPlugin
         } catch (ClassNotFoundException | NoSuchFieldException | SecurityException | NoSuchMethodException e) {
             e.printStackTrace();
         }
+    }
+
+    public void autoFix() {
+        this.autoFix = (new BukkitRunnable() { public void run() { byte b; int i;
+            Player[] arrayOfPlayer;
+            for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; ) { Player pl = arrayOfPlayer[b];
+                KPM.this.fix(pl);
+                b++; }
+        } }
+        ).runTaskTimer(this, 0L, (getConfig().getInt("auto-fix-time") * 20));
+    }
+
+
+    public void fix(Player pl, Player fixer) {
+        if (pl.hasMetadata("Vanish"))
+            return;  fixer.hidePlayer(pl);
+        fixer.showPlayer(pl);
+    }
+
+
+    public void fix(Player p) {
+        if (p.hasMetadata("Vanish"))
+            return;  byte b; int i; Player[] arrayOfPlayer; for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; ) { Player pl = arrayOfPlayer[b];
+            pl.hidePlayer(p);
+            pl.showPlayer(p);
+            b++; }
+
     }
 
 

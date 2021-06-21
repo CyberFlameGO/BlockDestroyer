@@ -1,5 +1,6 @@
 package net.cyberflame.kpm.listeners;
 
+import net.cyberflame.kpm.KPM;
 import net.cyberflame.kpm.utils.BlockChecker;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -26,7 +27,8 @@ public class PlayerJoinListener implements Listener
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        player.getInventory().setHelmet(new ItemStack(Material.GLASS));
+        if (KPM.getPlugin().getConfig().getBoolean("glass-head")) {
+            player.getInventory().setHelmet(new ItemStack(Material.GLASS));
+        }
     }
 }

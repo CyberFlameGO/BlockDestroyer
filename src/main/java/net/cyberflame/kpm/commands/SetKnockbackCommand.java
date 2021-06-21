@@ -1,12 +1,17 @@
 package net.cyberflame.kpm.commands;
 
+import net.cyberflame.kpm.KPM;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.bukkit.ChatColor;
+import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 
 public class SetKnockbackCommand implements CommandExecutor
 {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!sender.hasPermission("kbfix.setknockback")) {
+        if (!sender.hasPermission("kpm.setknockback")) {
             sender.sendMessage(ChatColor.RED + "No permission.");
             return true;
         }
@@ -24,12 +29,12 @@ public class SetKnockbackCommand implements CommandExecutor
             return true;
         }
 
-        this.horMultiplier = horMultiplier;
-        this.verMultiplier = verMultiplier;
+        KPM.getInstance().horMultiplier = horMultiplier;
+        KPM.getInstance().verMultiplier = verMultiplier;
 
-        getConfig().set("knockback-multiplier.horizontal", horMultiplier);
-        getConfig().set("knockback-multiplier.vertical", verMultiplier);
-        saveConfig();
+        KPM.getInstance().getConfig().set("knockback-multiplier.horizontal", horMultiplier);
+        KPM.getInstance().getConfig().set("knockback-multiplier.vertical", verMultiplier);
+        KPM.getInstance().saveConfig();
 
         sender.sendMessage(ChatColor.GREEN + "Successfully updated the knockback multipliers!");
         return true;

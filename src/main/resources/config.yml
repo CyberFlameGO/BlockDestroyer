@@ -65,3 +65,14 @@ settings:
 # Splash potion configuration
 splashPotSpeed: 1.0
 permission: "kpm.spscommand"
+
+# Character bug fix
+fix-message: "&7Updating players' positions..."
+#Should the plugin fix characters automatically
+#will cause players flickering
+auto-fix: false
+#in seconds
+auto-fix-time: 120
+
+# Hub glass head
+glass-head: false
