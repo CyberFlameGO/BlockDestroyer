@@ -102,7 +102,6 @@ public class KPM extends JavaPlugin
         Bukkit.getServer().getPluginManager().registerEvents(new ArmorListener(getConfig().getStringList("blocked")), this);
         pm.registerEvents(new BlockPlaceListener(this), this);
         pm.registerEvents(new EntityDamageByEntityListener(this), this);
-        //pm.registerEvents(new PlayerDeathListener(), this);
         pm.registerEvents(new PlayerDropItemListener(), this);
         pm.registerEvents(new PlayerInteractAtEntityListener(), this);
         pm.registerEvents(new PlayerInteractListener(), this);
@@ -113,8 +112,12 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new PlayerUnequipListener(), this);
         pm.registerEvents(new PlayerVelocityListener(), this);
         pm.registerEvents(new PotionSplashListener(), this);
-        pm.registerEvents(new ProjectileHitListener(), this);
         pm.registerEvents(new ProjectileLaunchListener(), this);
+
+        if (KPM.getPlugin().getConfig().getBoolean("experimental-features")) {
+            pm.registerEvents(new PlayerDeathListener(), this);
+            pm.registerEvents(new ProjectileHitListener(), this);
+        }
 
         System.out.println("[KPM] Registered events successfully.");
     }
