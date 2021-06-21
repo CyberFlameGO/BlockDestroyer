@@ -62,4 +62,6 @@ settings:
   velocity-multiplier: 2.5 # The higher the velocity multiplier the further the player will travel.
   punch-only: false # Should bow boosting only work for punch bows?
 
-potion
+# Splash potion configuration
+splashPotSpeed: 1.0
+permission: "kpm.spscommand"

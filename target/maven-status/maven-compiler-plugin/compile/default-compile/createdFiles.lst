@@ -15,8 +15,10 @@ net/cyberflame/kpm/listeners/PlayerQuitListener.class
 net/cyberflame/kpm/listeners/ProjectileLaunchListener.class
 net/cyberflame/kpm/listeners/ArmorListener.class
 net/cyberflame/kpm/listeners/PlayerDropItemListener.class
+net/cyberflame/kpm/listeners/PotionSplashListener.class
 net/cyberflame/kpm/listeners/ProjectileHitListener.class
 net/cyberflame/kpm/KPM.class
+net/cyberflame/kpm/commands/SplashPotionSpeedCommand.class
 net/cyberflame/kpm/listeners/EntityDamageByEntityListener.class
 net/cyberflame/kpm/listeners/PlayerUnequipListener.class
 net/cyberflame/kpm/listeners/BlockPlaceListener$1.class
@@ -25,3 +27,4 @@ net/cyberflame/kpm/events/ArmorEquipEvent$EquipMethod.class
 net/cyberflame/kpm/events/ArmorEquipEvent.class
 net/cyberflame/kpm/listeners/PlayerInteractAtEntityListener.class
 net/cyberflame/kpm/utils/StringUtils.class
+net/cyberflame/kpm/commands/KPMCommand.class
