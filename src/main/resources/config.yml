@@ -67,3 +67,9 @@ glass-head: false
 
 # Experimental listeners
 experimental-features: false
+
+# Death potion
+potion-name: "&b%player%'s potion"
+blocked-effects:
+  - "ABSORPTION"
+  - "DAMAGE_RESISTANCE"

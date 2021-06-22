@@ -12,10 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 public class KPM extends JavaPlugin
 {
@@ -23,6 +20,8 @@ public class KPM extends JavaPlugin
     private static KPM plugin;
     private static List<String> disabledWorlds;
     private static Map<UUID, Boolean> enabledBuild;
+    private String POTION_NAME;
+    private List<String> BLOCKED_EFFECTS;
 
     public Field fieldPlayerConnection;
     public Method sendPacket;
@@ -67,6 +66,18 @@ public class KPM extends JavaPlugin
         this.craftBukkitVersion = Bukkit.getServer().getClass().getPackage().getName().split("\\.")[3];
         this.horMultiplier = getConfig().getDouble("knockback-multiplier.horizontal");
         this.verMultiplier = getConfig().getDouble("knockback-multiplier.vertical");
+        if (getConfig().getString("potion-name") == null) {
+            this.POTION_NAME = "&b%player%'s potion";
+        } else {
+            this.POTION_NAME = getConfig().getString("potion-name");
+        }
+
+        if (getConfig().getStringList("blocked-effects") == null) {
+            this.BLOCKED_EFFECTS = new ArrayList<>();
+        } else {
+            this.BLOCKED_EFFECTS = getConfig().getStringList("blocked-effects");
+        }
+        getServer().getPluginManager().registerEvents(new EntityDeathListener(), this);
 
         enabledBuild = new HashMap<UUID, Boolean>();
         disabledWorlds = this.getConfig().getStringList("disabled-worlds");
@@ -99,7 +110,7 @@ public class KPM extends JavaPlugin
 
         if (KPM.getPlugin().getConfig().getBoolean("experimental-features"))
             {
-                pm.registerEvents(new PlayerDeathListener(), this);
+                pm.registerEvents(new EntityDeathListener(), this);
                 pm.registerEvents(new ProjectileHitListener(), this);
             }
 
@@ -129,6 +140,13 @@ public class KPM extends JavaPlugin
         return enabledBuild.get(uuid) != null;
     }
 
+    public String getPotionName() {
+        return this.POTION_NAME;
+    }
+
+    public List<String> getBlockedEffects() {
+        return this.BLOCKED_EFFECTS;
+    }
 
     @Override
     public void onDisable()

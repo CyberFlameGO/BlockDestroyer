@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="yah yah yah">
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/CharacterFixCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SetKnockbackCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SplashPotionSpeedCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/BlockPlaceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/BlockPlaceListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerQuitListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerVelocityListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PotionSplashListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileLaunchListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/BlockChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDeathListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,14 +126,7 @@
       <workItem from="1623980915041" duration="354000" />
       <workItem from="1624224422368" duration="8372000" />
       <workItem from="1624329688032" duration="12000" />
-      <workItem from="1624395405820" duration="580000" />
-    </task>
-    <task id="LOCAL-00012" summary="various updates">
-      <created>1623628210314</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1623628210314</updated>
+      <workItem from="1624395405820" duration="921000" />
     </task>
     <task id="LOCAL-00013" summary="run maven clean goal">
       <created>1623628291651</created>
@@ -481,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624405175699</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="yah yah yah">
+      <created>1624405663243</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1624405663244</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
