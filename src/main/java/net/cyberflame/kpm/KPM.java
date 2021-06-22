@@ -1,14 +1,13 @@
 package net.cyberflame.kpm;
 
-import net.cyberflame.kpm.commands.*;
+import net.cyberflame.kpm.commands.BuildModeCommand;
+import net.cyberflame.kpm.commands.KPMCommand;
+import net.cyberflame.kpm.commands.PingCommand;
 import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -24,7 +23,6 @@ public class KPM extends JavaPlugin
     private static KPM plugin;
     private static List<String> disabledWorlds;
     private static Map<UUID, Boolean> enabledBuild;
-    public BukkitTask autoFix;
 
     public Field fieldPlayerConnection;
     public Method sendPacket;
@@ -62,10 +60,6 @@ public class KPM extends JavaPlugin
     {
         plugin = this;
         getConfig().options().copyDefaults(true);
-        getConfig().addDefault("potionfall", 1.0);
-        getConfig().addDefault("permission", "potionfall.command");
-        getConfig().addDefault("knockback-multiplier.horizontal", 1D);
-        getConfig().addDefault("knockback-multiplier.vertical", 1D);
         saveConfig();
         this.getConfig().options().copyDefaults(true);
         this.saveConfig();
@@ -80,11 +74,6 @@ public class KPM extends JavaPlugin
         saveResource("config.yml", false);
 
         reloadConfig();
-
-        if (getConfig().getBoolean("auto-fix"))
-            {
-                autoFix();
-            }
 
         registerListeners();
         registerCommands();
@@ -106,12 +95,7 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new PlayerInteractListener(), this);
         pm.registerEvents(new PlayerItemConsumeListener(), this);
         pm.registerEvents(new PlayerJoinListener(), this);
-        pm.registerEvents(new PlayerQuitListener(), this);
-        pm.registerEvents(new PlayerTeleportListener(), this);
         pm.registerEvents(new PlayerUnequipListener(), this);
-        pm.registerEvents(new PlayerVelocityListener(), this);
-        pm.registerEvents(new PotionSplashListener(), this);
-        pm.registerEvents(new ProjectileLaunchListener(), this);
 
         if (KPM.getPlugin().getConfig().getBoolean("experimental-features"))
             {
@@ -126,10 +110,7 @@ public class KPM extends JavaPlugin
     {
         this.getCommand("kpm").setExecutor(new KPMCommand());
         this.getCommand("buildmode").setExecutor(new BuildModeCommand(plugin));
-        getCommand("splashpotionspeed").setExecutor(new SplashPotionSpeedCommand());
         getCommand("ping").setExecutor(new PingCommand());
-        getCommand("setknockback").setExecutor(new SetKnockbackCommand());
-        getCommand("characterfix").setExecutor(new CharacterFixCommand());
     }
 
     public void setBuildEnabled(UUID uuid)
@@ -148,113 +129,6 @@ public class KPM extends JavaPlugin
         return enabledBuild.get(uuid) != null;
     }
 
-    public void setSPSTo(Double values)
-    {
-        getConfig().set("splashPotSpeed", values);
-        saveConfig();
-        reloadConfig();
-    }
-
-    public Double getSPSValue()
-    {
-        return getConfig().getDouble("splashPotSpeed");
-    }
-
-    public String getCraftBukkitVersion()
-    {
-        return craftBukkitVersion;
-    }
-
-    public double getHorMultiplier()
-    {
-        return horMultiplier;
-    }
-
-    public void setHorMultiplier(double horMultiplier)
-    {
-        this.horMultiplier = horMultiplier;
-    }
-
-    public double getVerMultiplier()
-    {
-        return verMultiplier;
-    }
-
-    public void setVerMultiplier(double verMultiplier)
-    {
-        this.verMultiplier = verMultiplier;
-    }
-
-    public void damageListener()
-    {
-        try
-            {
-                Class<?> entityPlayerClass =
-                        Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
-                                      ".EntityPlayer");
-                Class<?> packetVelocityClass =
-                        Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
-                                      ".PacketPlayOutEntityVelocity");
-                Class<?> playerConnectionClass =
-                        Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
-                                      ".PlayerConnection");
-
-                // Get the fields here to improve performance later on
-                this.fieldPlayerConnection = entityPlayerClass.getField("playerConnection");
-                this.sendPacket = playerConnectionClass.getMethod("sendPacket", packetVelocityClass.getSuperclass());
-                this.packetVelocity = packetVelocityClass.getConstructor(int.class, double.class, double.class, double.class);
-            }
-        catch (ClassNotFoundException | NoSuchFieldException | SecurityException | NoSuchMethodException e)
-            {
-                e.printStackTrace();
-            }
-    }
-
-    public void autoFix()
-    {
-        this.autoFix = (new BukkitRunnable()
-        {
-            public void run()
-            {
-                byte b;
-                int i;
-                Player[] arrayOfPlayer;
-                for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; )
-                    {
-                        Player pl = arrayOfPlayer[b];
-                        KPM.this.fix(pl);
-                        b++;
-                    }
-            }
-        }
-        ).runTaskTimer(this, 0L, (getConfig().getInt("auto-fix-time") * 20));
-    }
-
-
-    public void fix(Player pl, Player fixer)
-    {
-        if (pl.hasMetadata("Vanish"))
-            return;
-        fixer.hidePlayer(pl);
-        fixer.showPlayer(pl);
-    }
-
-
-    public void fix(Player p)
-    {
-        if (p.hasMetadata("Vanish"))
-            return;
-        byte b;
-        int i;
-        Player[] arrayOfPlayer;
-        for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; )
-            {
-                Player pl = arrayOfPlayer[b];
-                pl.hidePlayer(p);
-                pl.showPlayer(p);
-                b++;
-            }
-    }
 
     @Override
     public void onDisable()
