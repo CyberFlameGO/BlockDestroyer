@@ -22,14 +22,6 @@ public class PlayerJoinListener implements Listener
         BlockChecker checker = BlockChecker.getBlockChecker(player);
         checker.runBlockChecker();
 
-        try
-            {
-                player.setPlayerListName(player.getDisplayName() + ChatColor.GOLD + " [" + getPingReflection(player) + "]");
-            }
-        catch (Exception e)
-            {
-                e.printStackTrace();
-            }
         if (KPM.getPlugin().getConfig().getBoolean("glass-head"))
             {
                 player.getInventory().setHelmet(new ItemStack(Material.GLASS));

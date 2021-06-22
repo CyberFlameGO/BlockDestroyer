@@ -75,7 +75,7 @@ public class BlockPlaceListener implements Listener
                         //remove the block placed.
                         block.setType(Material.AIR);
                         world.playSound(location, Sound.DIG_STONE, 1F, 1F);
-                        //world.playEffect(location, Effect.TILE_BREAK, block);
+                        world.playEffect(location, Effect.TILE_BREAK, block.getType());
                     }
                 }, 20L * 2L * 3l);
             }

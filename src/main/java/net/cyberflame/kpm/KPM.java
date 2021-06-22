@@ -160,16 +160,6 @@ public class KPM extends JavaPlugin
         return getConfig().getDouble("splashPotSpeed");
     }
 
-    @Override
-    public void onDisable()
-    {
-        final CommandSender console = this.getServer().getConsoleSender();
-
-        System.out.println(getEnabledBuild());
-        console.sendMessage("KPM disabled.");
-        plugin = null;
-    }
-
     public String getCraftBukkitVersion()
     {
         return craftBukkitVersion;
@@ -264,6 +254,15 @@ public class KPM extends JavaPlugin
                 pl.showPlayer(p);
                 b++;
             }
+    }
 
+    @Override
+    public void onDisable()
+    {
+        final CommandSender console = this.getServer().getConsoleSender();
+
+        System.out.println(getEnabledBuild());
+        console.sendMessage("KPM disabled.");
+        plugin = null;
     }
 }
