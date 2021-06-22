@@ -57,7 +57,7 @@ commands:
   setknockback:
     description: Set knockback
     permission: kpm.setknockback
-    aliases: [setkb]
+    aliases: [ setkb ]
   characterfix:
     description: Fix character
     permission: kpm.charfix
