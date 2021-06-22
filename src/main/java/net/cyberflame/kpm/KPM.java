@@ -5,7 +5,6 @@ import net.cyberflame.kpm.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -18,7 +17,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import java.util.regex.Pattern;
 
 public class KPM extends JavaPlugin
 {
@@ -40,7 +38,8 @@ public class KPM extends JavaPlugin
         return plugin;
     }
 
-    public static KPM getPlugin() {
+    public static KPM getPlugin()
+    {
         return plugin;
     }
 
@@ -105,7 +104,7 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new PlayerDropItemListener(), this);
         pm.registerEvents(new PlayerInteractAtEntityListener(), this);
         pm.registerEvents(new PlayerInteractListener(), this);
-        pm.registerEvents(new PlayerItemConsumeListener(), this);;
+        pm.registerEvents(new PlayerItemConsumeListener(), this);
         pm.registerEvents(new PlayerJoinListener(), this);
         pm.registerEvents(new PlayerQuitListener(), this);
         pm.registerEvents(new PlayerTeleportListener(), this);
@@ -114,10 +113,11 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new PotionSplashListener(), this);
         pm.registerEvents(new ProjectileLaunchListener(), this);
 
-        if (KPM.getPlugin().getConfig().getBoolean("experimental-features")) {
-            pm.registerEvents(new PlayerDeathListener(), this);
-            pm.registerEvents(new ProjectileHitListener(), this);
-        }
+        if (KPM.getPlugin().getConfig().getBoolean("experimental-features"))
+            {
+                pm.registerEvents(new PlayerDeathListener(), this);
+                pm.registerEvents(new ProjectileHitListener(), this);
+            }
 
         System.out.println("[KPM] Registered events successfully.");
     }
@@ -148,13 +148,15 @@ public class KPM extends JavaPlugin
         return enabledBuild.get(uuid) != null;
     }
 
-    public void setSPSTo(Double values) {
+    public void setSPSTo(Double values)
+    {
         getConfig().set("splashPotSpeed", values);
         saveConfig();
         reloadConfig();
     }
 
-    public Double getSPSValue() {
+    public Double getSPSValue()
+    {
         return getConfig().getDouble("splashPotSpeed");
     }
 
@@ -168,96 +170,100 @@ public class KPM extends JavaPlugin
         plugin = null;
     }
 
-    public static int getPingReflection(Player player) throws Exception {
-        int ping = 0;
-        Class<?> craftPlayer = Class.forName("org.bukkit.craftbukkit." + getServerVersion() + "entity.CraftPlayer");
-        Object converted = craftPlayer.cast(player);
-        Method handle = converted.getClass().getMethod("getHandle");
-        Object entityPlayer = handle.invoke(converted);
-        Field pingField = entityPlayer.getClass().getField("ping");
-        ping = pingField.getInt(entityPlayer);
-        return ping;
-    }
-
-    public static String getServerVersion() {
-        Pattern brand = Pattern.compile("(v|)[0-9][_.][0-9][_.][R0-9]*");
-        String version = null;
-        String pkg = Bukkit.getServer().getClass().getPackage().getName();
-        String version0 = pkg.substring(pkg.lastIndexOf('.') + 1);
-        if (!brand.matcher(version0).matches()) {
-            version0 = "";
-        }
-        version = version0;
-        return !"".equals(version) ? version + "." : "";
-    }
-
-    public String getCraftBukkitVersion() {
+    public String getCraftBukkitVersion()
+    {
         return craftBukkitVersion;
     }
 
-    public double getHorMultiplier() {
+    public double getHorMultiplier()
+    {
         return horMultiplier;
     }
 
-    public void setHorMultiplier(double horMultiplier) {
+    public void setHorMultiplier(double horMultiplier)
+    {
         this.horMultiplier = horMultiplier;
     }
 
-    public double getVerMultiplier() {
+    public double getVerMultiplier()
+    {
         return verMultiplier;
     }
 
-    public void setVerMultiplier(double verMultiplier) {
+    public void setVerMultiplier(double verMultiplier)
+    {
         this.verMultiplier = verMultiplier;
     }
 
-    public void damageListener() {
-        try {
-            Class<?> entityPlayerClass =
-                    Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
-                                  ".EntityPlayer");
-            Class<?> packetVelocityClass =
-                    Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
-                                  ".PacketPlayOutEntityVelocity");
-            Class<?> playerConnectionClass =
-                    Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
-                                  ".PlayerConnection");
+    public void damageListener()
+    {
+        try
+            {
+                Class<?> entityPlayerClass =
+                        Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
+                                      ".EntityPlayer");
+                Class<?> packetVelocityClass =
+                        Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
+                                      ".PacketPlayOutEntityVelocity");
+                Class<?> playerConnectionClass =
+                        Class.forName("net.minecraft.server." + KPM.getInstance().getCraftBukkitVersion() +
+                                      ".PlayerConnection");
 
-            // Get the fields here to improve performance later on
-            this.fieldPlayerConnection = entityPlayerClass.getField("playerConnection");
-            this.sendPacket = playerConnectionClass.getMethod("sendPacket", packetVelocityClass.getSuperclass());
-            this.packetVelocity = packetVelocityClass.getConstructor(int.class, double.class, double.class, double.class);
-        } catch (ClassNotFoundException | NoSuchFieldException | SecurityException | NoSuchMethodException e) {
-            e.printStackTrace();
-        }
+                // Get the fields here to improve performance later on
+                this.fieldPlayerConnection = entityPlayerClass.getField("playerConnection");
+                this.sendPacket = playerConnectionClass.getMethod("sendPacket", packetVelocityClass.getSuperclass());
+                this.packetVelocity = packetVelocityClass.getConstructor(int.class, double.class, double.class, double.class);
+            }
+        catch (ClassNotFoundException | NoSuchFieldException | SecurityException | NoSuchMethodException e)
+            {
+                e.printStackTrace();
+            }
     }
 
-    public void autoFix() {
-        this.autoFix = (new BukkitRunnable() { public void run() { byte b; int i;
-            Player[] arrayOfPlayer;
-            for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; ) { Player pl = arrayOfPlayer[b];
-                KPM.this.fix(pl);
-                b++; }
-        } }
+    public void autoFix()
+    {
+        this.autoFix = (new BukkitRunnable()
+        {
+            public void run()
+            {
+                byte b;
+                int i;
+                Player[] arrayOfPlayer;
+                for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; )
+                    {
+                        Player pl = arrayOfPlayer[b];
+                        KPM.this.fix(pl);
+                        b++;
+                    }
+            }
+        }
         ).runTaskTimer(this, 0L, (getConfig().getInt("auto-fix-time") * 20));
     }
 
 
-    public void fix(Player pl, Player fixer) {
+    public void fix(Player pl, Player fixer)
+    {
         if (pl.hasMetadata("Vanish"))
-            return;  fixer.hidePlayer(pl);
+            return;
+        fixer.hidePlayer(pl);
         fixer.showPlayer(pl);
     }
 
 
-    public void fix(Player p) {
+    public void fix(Player p)
+    {
         if (p.hasMetadata("Vanish"))
-            return;  byte b; int i; Player[] arrayOfPlayer; for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; ) { Player pl = arrayOfPlayer[b];
-            pl.hidePlayer(p);
-            pl.showPlayer(p);
-            b++; }
+            return;
+        byte b;
+        int i;
+        Player[] arrayOfPlayer;
+        for (i = (arrayOfPlayer = Bukkit.getOnlinePlayers().toArray(new Player[0])).length, b = 0; b < i; )
+            {
+                Player pl = arrayOfPlayer[b];
+                pl.hidePlayer(p);
+                pl.showPlayer(p);
+                b++;
+            }
 
     }
-
-
 }

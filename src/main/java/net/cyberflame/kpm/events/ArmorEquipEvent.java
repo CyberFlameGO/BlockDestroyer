@@ -1,11 +1,11 @@
 package net.cyberflame.kpm.events;
 
+import net.cyberflame.kpm.utils.ArmorType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.player.PlayerEvent;
 import org.bukkit.inventory.ItemStack;
-import net.cyberflame.kpm.utils.ArmorType;
 
 public final class ArmorEquipEvent extends PlayerEvent implements Cancellable
 {

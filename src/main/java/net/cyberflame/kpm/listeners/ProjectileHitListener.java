@@ -25,7 +25,7 @@ public class ProjectileHitListener implements Listener
             return;
         World world = arrow.getWorld();
         BlockIterator iterator = new BlockIterator(world, arrow.getLocation().toVector(),
-                arrow.getVelocity().normalize(), 0.0D, 4);
+                                                   arrow.getVelocity().normalize(), 0.0D, 4);
         Block hitBlock = null;
         while (iterator.hasNext())
             {

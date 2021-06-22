@@ -1,7 +1,7 @@
 package net.cyberflame.kpm.utils;
 
-import org.bukkit.inventory.ItemStack;
 import net.cyberflame.kpm.listeners.ArmorListener;
+import org.bukkit.inventory.ItemStack;
 
 public enum ArmorType
 {
@@ -18,6 +18,7 @@ public enum ArmorType
      * Attempts to match the ArmorType for the specified ItemStack.
      *
      * @param itemStack The ItemStack to parse the type of.
+     *
      * @return The parsed ArmorType, or null if not found.
      */
     public static ArmorType matchType(final ItemStack itemStack)

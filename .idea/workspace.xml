@@ -4,45 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="Many edits">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/CharacterFixCommand.java" afterDir="false" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="Add configs">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/codeql-analysis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/codeql-analysis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/BuildModeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/BuildModeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/CharacterFixCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/CharacterFixCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/KPMCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/KPMCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/PingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/PingCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SetKnockbackCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SetKnockbackCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SplashPotionSpeedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SplashPotionSpeedCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/events/ArmorEquipEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/events/ArmorEquipEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ArmorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ArmorListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDropItemListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDropItemListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerInteractAtEntityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerInteractAtEntityListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerInteractListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerItemConsumeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerItemConsumeListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerQuitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerQuitListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerTeleportListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerUnequipListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerUnequipListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PotionSplashListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PotionSplashListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileHitListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileHitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileLaunchListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileLaunchListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ArmorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ArmorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/BlockChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/BlockChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/Zone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/Zone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ZoneVector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/ZoneVector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/KPM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/commands/BuildModeCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/events/ArmorEquipEvent$EquipMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/events/ArmorEquipEvent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/ArmorListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/BlockPlaceListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/BlockPlaceListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDeathListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDropItemListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDropItemListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerInteractAtEntityListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerInteractListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerItemConsumeListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerItemConsumeListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerJoinListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerQuitListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerTeleportListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerUnequipListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/ProjectileHitListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/ProjectileLaunchListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/ArmorType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/BlockChecker$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/BlockChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/StringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/Zone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/ZoneVector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/KPM.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/KPM.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-KPM.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-KPM.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +97,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
@@ -159,20 +161,6 @@
       <workItem from="1623884592255" duration="4992000" />
       <workItem from="1623980915041" duration="354000" />
       <workItem from="1624224422368" duration="8372000" />
-    </task>
-    <task id="LOCAL-00003" summary="re-add a listener class i deleted without committing, it's a temp class">
-      <created>1623277362385</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1623277362385</updated>
-    </task>
-    <task id="LOCAL-00004" summary="re-add a listener class i deleted without committing, it's a temp class">
-      <created>1623277370808</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1623277370808</updated>
     </task>
     <task id="LOCAL-00005" summary="update artifactid">
       <created>1623278336070</created>
@@ -503,7 +491,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624238772615</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Many edits">
+      <created>1624315875663</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1624315875663</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Add configs">
+      <created>1624316063569</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1624316063569</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="I wonder if this fixes it" />
     <MESSAGE value="clean up some code" />
     <MESSAGE value="even cleaner" />
     <MESSAGE value="add more functionality" />
@@ -548,6 +549,7 @@
     <MESSAGE value="change == to &gt;=" />
     <MESSAGE value="a lot of changes" />
     <MESSAGE value="Many edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Many edits" />
+    <MESSAGE value="Add configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add configs" />
   </component>
 </project>

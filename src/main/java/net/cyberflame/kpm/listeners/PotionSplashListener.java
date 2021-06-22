@@ -11,12 +11,14 @@ public class PotionSplashListener implements Listener
     @EventHandler
     void onPotionSplash(final PotionSplashEvent event)
     {
-        if (event.getEntity().getShooter() instanceof Player) {
-            final Player shooter = (Player) event.getEntity().getShooter();
+        if (event.getEntity().getShooter() instanceof Player)
+            {
+                final Player shooter = (Player) event.getEntity().getShooter();
 
-            if (shooter.isSprinting() && event.getIntensity(shooter) > 0.6D) {
-                event.setIntensity(shooter, 1.0D);
+                if (shooter.isSprinting() && event.getIntensity(shooter) > 0.6D)
+                    {
+                        event.setIntensity(shooter, 1.0D);
+                    }
             }
-        }
     }
 }

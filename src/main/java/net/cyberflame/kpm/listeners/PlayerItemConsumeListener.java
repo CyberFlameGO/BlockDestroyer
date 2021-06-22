@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class PlayerItemConsumeListener implements Listener
 {
-    private KPM plugin;
+    private final KPM plugin;
 
     public PlayerItemConsumeListener()
     {
@@ -18,12 +18,15 @@ public class PlayerItemConsumeListener implements Listener
     }
 
     @EventHandler
-    public void onConsume(final PlayerItemConsumeEvent e) {
+    public void onConsume(final PlayerItemConsumeEvent e)
+    {
         if (e.getItem().getType().equals(Material.POTION))
-            Bukkit.getServer().getScheduler().runTaskLaterAsynchronously(plugin, new Runnable() {
-                public void run() {
+            Bukkit.getServer().getScheduler().runTaskLaterAsynchronously(plugin, new Runnable()
+            {
+                public void run()
+                {
                     e.getPlayer().setItemInHand(new ItemStack(Material.AIR));
                 }
-            },  1L);
+            }, 1L);
     }
 }

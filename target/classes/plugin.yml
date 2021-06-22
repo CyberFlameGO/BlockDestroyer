@@ -15,6 +15,7 @@ permissions:
       kpm.ping: true
       kpm.ping.others: true
       kpm.setknockback: true
+      kpm.charfix: true
   kpm.root:
     description: KPM root
   kpm.buildmode:
@@ -34,6 +35,9 @@ permissions:
   kpm.setknockback:
     description: Allows editing of knockback values
     default: op
+  kpm.charfix:
+    description: Fix glitching character
+    default: true
 commands:
   kpm:
     description: KPM command
@@ -54,3 +58,6 @@ commands:
     description: Set knockback
     permission: kpm.setknockback
     aliases: [setkb]
+  characterfix:
+    description: Fix character
+    permission: kpm.charfix

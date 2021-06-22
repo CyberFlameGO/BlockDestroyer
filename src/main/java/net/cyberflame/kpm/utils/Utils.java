@@ -1,15 +1,18 @@
 package net.cyberflame.kpm.utils;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import net.cyberflame.kpm.KPM;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class StringUtils
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
+
+public class Utils
 {
 
     public static String NO_PERMISSION = "&cYou do not have permission to perform this command.";
@@ -103,6 +106,32 @@ public class StringUtils
     public static String format(String message, String str0, String str1)
     {
         return message.replace(str0, str1);
+    }
+
+    public static int getPingReflection(Player player) throws Exception
+    {
+        int ping = 0;
+        Class<?> craftPlayer = Class.forName("org.bukkit.craftbukkit." + getServerVersion() + "entity.CraftPlayer");
+        Object converted = craftPlayer.cast(player);
+        Method handle = converted.getClass().getMethod("getHandle");
+        Object entityPlayer = handle.invoke(converted);
+        Field pingField = entityPlayer.getClass().getField("ping");
+        ping = pingField.getInt(entityPlayer);
+        return ping;
+    }
+
+    public static String getServerVersion()
+    {
+        Pattern brand = Pattern.compile("(v|)[0-9][_.][0-9][_.][R0-9]*");
+        String version = null;
+        String pkg = Bukkit.getServer().getClass().getPackage().getName();
+        String version0 = pkg.substring(pkg.lastIndexOf('.') + 1);
+        if (!brand.matcher(version0).matches())
+            {
+                version0 = "";
+            }
+        version = version0;
+        return !"".equals(version) ? version + "." : "";
     }
 
 }

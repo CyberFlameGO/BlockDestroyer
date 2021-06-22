@@ -1,22 +1,25 @@
 package net.cyberflame.kpm.listeners;
 
 import net.cyberflame.kpm.KPM;
-import org.bukkit.event.entity.*;
-import org.bukkit.entity.*;
-import org.bukkit.event.*;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Projectile;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.util.Vector;
 
 public class ProjectileLaunchListener implements Listener
 {
 
-    private Double splashPotSpeed = KPM.getPlugin().getConfig().getDouble("splashPotSpeed");
+    private final Double splashPotSpeed = KPM.getPlugin().getConfig().getDouble("splashPotSpeed");
 
     @SuppressWarnings("deprecation")
     @EventHandler
     public void playerRod(final ProjectileLaunchEvent e)
     {
         final double v = 1.1; //<--To make the rod even faster just change the value right here. ex. 2.0
-        if (e.getEntityType().equals((Object) EntityType.FISHING_HOOK))
+        if (e.getEntityType().equals(EntityType.FISHING_HOOK))
             {
                 e.getEntity().setVelocity(e.getEntity().getVelocity().multiply(v));
             }

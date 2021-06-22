@@ -10,14 +10,16 @@ import org.bukkit.inventory.ItemStack;
 public class PlayerInteractAtEntityListener implements Listener
 {
     @EventHandler
-    public void playerAtEntityInteract(PlayerInteractAtEntityEvent event) {
+    public void playerAtEntityInteract(PlayerInteractAtEntityEvent event)
+    {
         Player player = event.getPlayer();
         if (player.getItemInHand().getType() == Material.MUSHROOM_SOUP)
             {
                 if (player.getHealth() == 20.0)
                     {
                         return;
-                    } else
+                    }
+                else
                     {
                         event.setCancelled(true);
                         double newHealth = Math.min(player.getHealth() + 7.0, player.getMaxHealth());

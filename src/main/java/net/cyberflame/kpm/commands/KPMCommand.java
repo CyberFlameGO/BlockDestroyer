@@ -4,11 +4,11 @@ import net.cyberflame.kpm.KPM;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.permissions.Permission;
 
 public class KPMCommand implements CommandExecutor
 {
     String kpmreload = "kpm.reload";
+
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
     {
         if (sender.hasPermission("kpm.root"))

@@ -8,6 +8,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import static net.cyberflame.kpm.utils.Utils.getPingReflection;
+
 public class PingCommand implements CommandExecutor
 {
 
@@ -42,7 +44,7 @@ public class PingCommand implements CommandExecutor
 
                 try
                     {
-                        sender.sendMessage(ChatColor.GREEN + player.getName() + "'s ping is " + KPM.getPingReflection(player) + "ms");
+                        sender.sendMessage(ChatColor.GREEN + player.getName() + "'s ping is " + getPingReflection(player) + "ms");
                     }
                 catch (Exception e)
                     {
@@ -63,7 +65,7 @@ public class PingCommand implements CommandExecutor
 
                 try
                     {
-                        sender.sendMessage(ChatColor.GREEN + "Your ping is " + KPM.getPingReflection(player) + "ms");
+                        sender.sendMessage(ChatColor.GREEN + "Your ping is " + getPingReflection(player) + "ms");
                     }
                 catch (Exception e)
                     {

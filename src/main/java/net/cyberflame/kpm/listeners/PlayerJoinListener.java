@@ -10,7 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 
-import static net.cyberflame.kpm.KPM.getPingReflection;
+import static net.cyberflame.kpm.utils.Utils.getPingReflection;
 
 public class PlayerJoinListener implements Listener
 {
@@ -22,13 +22,17 @@ public class PlayerJoinListener implements Listener
         BlockChecker checker = BlockChecker.getBlockChecker(player);
         checker.runBlockChecker();
 
-        try {
-            player.setPlayerListName(player.getDisplayName() + ChatColor.GOLD + " [" + getPingReflection(player) + "]");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if (KPM.getPlugin().getConfig().getBoolean("glass-head")) {
-            player.getInventory().setHelmet(new ItemStack(Material.GLASS));
-        }
+        try
+            {
+                player.setPlayerListName(player.getDisplayName() + ChatColor.GOLD + " [" + getPingReflection(player) + "]");
+            }
+        catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        if (KPM.getPlugin().getConfig().getBoolean("glass-head"))
+            {
+                player.getInventory().setHelmet(new ItemStack(Material.GLASS));
+            }
     }
 }

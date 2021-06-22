@@ -1,12 +1,11 @@
 package net.cyberflame.kpm.commands;
 
+import net.cyberflame.kpm.KPM;
 import org.apache.commons.lang.math.NumberUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-
-import net.cyberflame.kpm.KPM;
 
 
 public class SplashPotionSpeedCommand implements CommandExecutor

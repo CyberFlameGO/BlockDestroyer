@@ -1,7 +1,8 @@
 package net.cyberflame.kpm.listeners;
 
-import java.util.List;
-
+import net.cyberflame.kpm.events.ArmorEquipEvent;
+import net.cyberflame.kpm.events.ArmorEquipEvent.EquipMethod;
+import net.cyberflame.kpm.utils.ArmorType;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -17,9 +18,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemBreakEvent;
 import org.bukkit.inventory.ItemStack;
 
-import net.cyberflame.kpm.events.ArmorEquipEvent;
-import net.cyberflame.kpm.events.ArmorEquipEvent.EquipMethod;
-import net.cyberflame.kpm.utils.ArmorType;
+import java.util.List;
 
 public class ArmorListener implements Listener
 {
@@ -63,15 +62,11 @@ public class ArmorListener implements Listener
                 newArmorType = ArmorType.matchType(e.getCurrentItem());
                 if (newArmorType != null)
                     {
-                        boolean equipping = true;
-                        if (e.getRawSlot() == newArmorType.getSlot())
-                            {
-                                equipping = false;
-                            }
-                        if (newArmorType.equals(ArmorType.HELMET) && (equipping ? isAirOrNull(e.getWhoClicked().getInventory().getHelmet()) : !isAirOrNull(e.getWhoClicked().getInventory().getHelmet()))
-                                || newArmorType.equals(ArmorType.CHESTPLATE) && (equipping ? isAirOrNull(e.getWhoClicked().getInventory().getChestplate()) : !isAirOrNull(e.getWhoClicked().getInventory().getChestplate()))
-                                || newArmorType.equals(ArmorType.LEGGINGS) && (equipping ? isAirOrNull(e.getWhoClicked().getInventory().getLeggings()) : !isAirOrNull(e.getWhoClicked().getInventory().getLeggings()))
-                                || newArmorType.equals(ArmorType.BOOTS) && (equipping ? isAirOrNull(e.getWhoClicked().getInventory().getBoots()) : !isAirOrNull(e.getWhoClicked().getInventory().getBoots())))
+                        boolean equipping = e.getRawSlot() != newArmorType.getSlot();
+                        if (newArmorType.equals(ArmorType.HELMET) && (equipping == isAirOrNull(e.getWhoClicked().getInventory().getHelmet()))
+                            || newArmorType.equals(ArmorType.CHESTPLATE) && (equipping == isAirOrNull(e.getWhoClicked().getInventory().getChestplate()))
+                            || newArmorType.equals(ArmorType.LEGGINGS) && (equipping == isAirOrNull(e.getWhoClicked().getInventory().getLeggings()))
+                            || newArmorType.equals(ArmorType.BOOTS) && (equipping == isAirOrNull(e.getWhoClicked().getInventory().getBoots())))
                             {
                                 ArmorEquipEvent armorEquipEvent = new ArmorEquipEvent((Player) e.getWhoClicked(), EquipMethod.SHIFT_CLICK, newArmorType, equipping ? null : e.getCurrentItem(), equipping ? e.getCurrentItem() : null);
                                 Bukkit.getServer().getPluginManager().callEvent(armorEquipEvent);
@@ -81,7 +76,8 @@ public class ArmorListener implements Listener
                                     }
                             }
                     }
-            } else
+            }
+        else
             {
                 ItemStack newArmorPiece = e.getCursor();
                 ItemStack oldArmorPiece = e.getCurrentItem();
@@ -101,12 +97,14 @@ public class ArmorListener implements Listener
                                         newArmorType = ArmorType.matchType(hotbarItem);
                                         newArmorPiece = hotbarItem;
                                         oldArmorPiece = e.getClickedInventory().getItem(e.getSlot());
-                                    } else
+                                    }
+                                else
                                     {// Unequipping
                                         newArmorType = ArmorType.matchType(!isAirOrNull(e.getCurrentItem()) ? e.getCurrentItem() : e.getCursor());
                                     }
                             }
-                    } else
+                    }
+                else
                     {
                         if (isAirOrNull(e.getCursor()) && !isAirOrNull(e.getCurrentItem()))
                             {
@@ -156,9 +154,9 @@ public class ArmorListener implements Listener
                 if (newArmorType != null)
                     {
                         if (newArmorType.equals(ArmorType.HELMET) && isAirOrNull(e.getPlayer().getInventory().getHelmet())
-                                || newArmorType.equals(ArmorType.CHESTPLATE) && isAirOrNull(e.getPlayer().getInventory().getChestplate())
-                                || newArmorType.equals(ArmorType.LEGGINGS) && isAirOrNull(e.getPlayer().getInventory().getLeggings())
-                                || newArmorType.equals(ArmorType.BOOTS) && isAirOrNull(e.getPlayer().getInventory().getBoots()))
+                            || newArmorType.equals(ArmorType.CHESTPLATE) && isAirOrNull(e.getPlayer().getInventory().getChestplate())
+                            || newArmorType.equals(ArmorType.LEGGINGS) && isAirOrNull(e.getPlayer().getInventory().getLeggings())
+                            || newArmorType.equals(ArmorType.BOOTS) && isAirOrNull(e.getPlayer().getInventory().getBoots()))
                             {
                                 ArmorEquipEvent armorEquipEvent = new ArmorEquipEvent(e.getPlayer(), EquipMethod.HOTBAR, ArmorType.matchType(e.getItem()), null, e.getItem());
                                 Bukkit.getServer().getPluginManager().callEvent(armorEquipEvent);
@@ -220,13 +218,16 @@ public class ArmorListener implements Listener
                         if (type.equals(ArmorType.HELMET))
                             {
                                 p.getInventory().setHelmet(i);
-                            } else if (type.equals(ArmorType.CHESTPLATE))
+                            }
+                        else if (type.equals(ArmorType.CHESTPLATE))
                             {
                                 p.getInventory().setChestplate(i);
-                            } else if (type.equals(ArmorType.LEGGINGS))
+                            }
+                        else if (type.equals(ArmorType.LEGGINGS))
                             {
                                 p.getInventory().setLeggings(i);
-                            } else if (type.equals(ArmorType.BOOTS))
+                            }
+                        else if (type.equals(ArmorType.BOOTS))
                             {
                                 p.getInventory().setBoots(i);
                             }

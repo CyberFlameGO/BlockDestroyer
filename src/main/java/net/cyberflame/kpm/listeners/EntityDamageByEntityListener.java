@@ -7,7 +7,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.*;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.Projectile;
+import org.bukkit.entity.Snowball;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -23,7 +26,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class EntityDamageByEntityListener implements Listener
 {
-    private KPM KPM;
+    private final KPM KPM;
 
     public EntityDamageByEntityListener(KPM KPM)
     {
@@ -99,18 +102,18 @@ public class EntityDamageByEntityListener implements Listener
                             Zone.contains(event.getEntity().getLocation(), 21, 27, -6, 0))
                             {
                                 event.setCancelled(true);
-                                sendMessage((CommandSender) event.getEntity(), "&cYou cannot use this in a safezone.");
+                                sendMessage(event.getEntity(), "&cYou cannot use this in a safezone.");
 
                                 return;
                             }
 
                         event.setDamage(1.0D);
-                        Bukkit.getServer().getScheduler().runTaskLater((Plugin) this.KPM, () ->
-                        {
+                        Bukkit.getServer().getScheduler().runTaskLater(this.KPM, () ->
+                            {
                             Vector velocity = p.getEyeLocation().getDirection().multiply(this.KPM.getConfig().getDouble("settings.velocity-multiplier", 2.5D));
                             velocity.setY(0.33D);
                             p.setVelocity(velocity);
-                        }, 0L);
+                            }, 0L);
                     }
             }
 
@@ -127,8 +130,8 @@ public class EntityDamageByEntityListener implements Listener
                 return;
             }
 
-        double horMultiplier = KPM.getInstance().getHorMultiplier();
-        double verMultiplier = KPM.getInstance().getVerMultiplier();
+        double horMultiplier = net.cyberflame.kpm.KPM.getInstance().getHorMultiplier();
+        double verMultiplier = net.cyberflame.kpm.KPM.getInstance().getVerMultiplier();
         double sprintMultiplier = damager.isSprinting() ? 0.8D : 0.5D;
         double kbMultiplier = damager.getItemInHand() == null ? 0 : damager.getItemInHand().getEnchantmentLevel(Enchantment.KNOCKBACK) * 0.2D;
         @SuppressWarnings("deprecation")
@@ -156,11 +159,13 @@ public class EntityDamageByEntityListener implements Listener
             }
     }
 
-    public static String replace(String text) {
+    public static String replace(String text)
+    {
         return ChatColor.translateAlternateColorCodes('&', text);
     }
 
-    public static void sendMessage(CommandSender sender, String message) {
+    public static void sendMessage(CommandSender sender, String message)
+    {
         sender.sendMessage(replace(message));
     }
 }

@@ -1,7 +1,6 @@
 package net.cyberflame.kpm.listeners;
 
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -11,15 +10,13 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-
 
 import java.util.Collection;
 import java.util.HashMap;
 
 public class PlayerDeathListener implements Listener
 {
-    private HashMap<String, Collection<PotionEffect>> playerMap = new HashMap<>();
+    private final HashMap<String, Collection<PotionEffect>> playerMap = new HashMap<>();
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e)
