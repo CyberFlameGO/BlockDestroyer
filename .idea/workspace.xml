@@ -122,13 +122,6 @@
       <workItem from="1623980915041" duration="354000" />
       <workItem from="1624224422368" duration="8372000" />
     </task>
-    <task id="LOCAL-00007" summary="add armor prep + todo">
-      <created>1623616996197</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1623616996197</updated>
-    </task>
     <task id="LOCAL-00008" summary="reformat + still adding armor event">
       <created>1623623674079</created>
       <option name="number" value="00008" />
@@ -465,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624321077555</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Code cleanup">
+      <created>1624321292270</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1624321292270</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
