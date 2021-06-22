@@ -16,7 +16,6 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.projectiles.ProjectileSource;
@@ -31,6 +30,16 @@ public class EntityDamageByEntityListener implements Listener
     public EntityDamageByEntityListener(KPM KPM)
     {
         this.KPM = KPM;
+    }
+
+    public static String replace(String text)
+    {
+        return ChatColor.translateAlternateColorCodes('&', text);
+    }
+
+    public static void sendMessage(CommandSender sender, String message)
+    {
+        sender.sendMessage(replace(message));
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
@@ -157,15 +166,5 @@ public class EntityDamageByEntityListener implements Listener
             {
                 e.printStackTrace();
             }
-    }
-
-    public static String replace(String text)
-    {
-        return ChatColor.translateAlternateColorCodes('&', text);
-    }
-
-    public static void sendMessage(CommandSender sender, String message)
-    {
-        sender.sendMessage(replace(message));
     }
 }

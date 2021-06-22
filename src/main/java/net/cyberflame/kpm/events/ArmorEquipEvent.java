@@ -11,9 +11,9 @@ public final class ArmorEquipEvent extends PlayerEvent implements Cancellable
 {
 
     private static final HandlerList handlers = new HandlerList();
-    private boolean cancel = false;
     private final EquipMethod equipType;
     private final ArmorType type;
+    private boolean cancel = false;
     private ItemStack oldArmorPiece, newArmorPiece;
 
     /**
@@ -53,16 +53,6 @@ public final class ArmorEquipEvent extends PlayerEvent implements Cancellable
     }
 
     /**
-     * Sets if this event should be cancelled.
-     *
-     * @param cancel If this event should be cancelled.
-     */
-    public final void setCancelled(final boolean cancel)
-    {
-        this.cancel = cancel;
-    }
-
-    /**
      * Gets if this event is cancelled.
      *
      * @return If this event is cancelled
@@ -70,6 +60,16 @@ public final class ArmorEquipEvent extends PlayerEvent implements Cancellable
     public final boolean isCancelled()
     {
         return cancel;
+    }
+
+    /**
+     * Sets if this event should be cancelled.
+     *
+     * @param cancel If this event should be cancelled.
+     */
+    public final void setCancelled(final boolean cancel)
+    {
+        this.cancel = cancel;
     }
 
     public final ArmorType getType()

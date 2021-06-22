@@ -31,6 +31,14 @@ public class ArmorListener implements Listener
     }
     //Event Priority is highest because other plugins might cancel the events before we check.
 
+    /**
+     * A utility method to support versions that use null or air ItemStacks.
+     */
+    public static boolean isAirOrNull(ItemStack item)
+    {
+        return item == null || item.getType().equals(Material.AIR);
+    }
+
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public final void inventoryClick(final InventoryClickEvent e)
     {
@@ -248,13 +256,5 @@ public class ArmorListener implements Listener
                         // No way to cancel a death event.
                     }
             }
-    }
-
-    /**
-     * A utility method to support versions that use null or air ItemStacks.
-     */
-    public static boolean isAirOrNull(ItemStack item)
-    {
-        return item == null || item.getType().equals(Material.AIR);
     }
 }
