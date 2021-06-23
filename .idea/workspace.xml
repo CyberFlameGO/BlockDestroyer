@@ -4,38 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="skrrt">
-      <change beforePath="$PROJECT_DIR$/target/KPM.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/KPM$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/KPM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/KPM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/commands/BuildModeCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/commands/CharacterFixCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/commands/SetKnockbackCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/commands/SplashPotionSpeedCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/ArmorListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/BlockPlaceListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/BlockPlaceListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDeathListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDropItemListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerDropItemListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerInteractAtEntityListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerJoinListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerJoinListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerQuitListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerTeleportListener$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerTeleportListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PlayerVelocityListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/PotionSplashListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/ProjectileHitListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/listeners/ProjectileLaunchListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/BlockChecker$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/BlockChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/cyberflame/kpm/utils/Zone.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-KPM.jar" beforeDir="false" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="oops">
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerQuitListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,14 +153,7 @@
       <workItem from="1624224422368" duration="8372000" />
       <workItem from="1624329688032" duration="12000" />
       <workItem from="1624395405820" duration="921000" />
-      <workItem from="1624488256052" duration="300000" />
-    </task>
-    <task id="LOCAL-00015" summary="git is confusing sometimes lol">
-      <created>1623632774670</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1623632774670</updated>
+      <workItem from="1624488256052" duration="621000" />
     </task>
     <task id="LOCAL-00016" summary="git is confusing sometimes lol pt. 2">
       <created>1623633007661</created>
@@ -527,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624488396223</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="oops">
+      <created>1624488776096</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1624488776096</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="pog" />
     <MESSAGE value="various non-code updates" />
     <MESSAGE value="fix pom" />
     <MESSAGE value="add more to edbe listener" />
@@ -579,6 +549,7 @@
     <MESSAGE value="Fix" />
     <MESSAGE value="yah yah yah" />
     <MESSAGE value="skrrt" />
-    <option name="LAST_COMMIT_MESSAGE" value="skrrt" />
+    <MESSAGE value="oops" />
+    <option name="LAST_COMMIT_MESSAGE" value="oops" />
   </component>
 </project>

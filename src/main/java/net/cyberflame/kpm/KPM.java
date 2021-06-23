@@ -107,6 +107,7 @@ public class KPM extends JavaPlugin
         pm.registerEvents(new PlayerItemConsumeListener(), this);
         pm.registerEvents(new PlayerJoinListener(), this);
         pm.registerEvents(new PlayerUnequipListener(), this);
+        pm.registerEvents(new PlayerQuitListener(), this);
 
         if (KPM.getPlugin().getConfig().getBoolean("experimental-features"))
             {
