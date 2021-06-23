@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="deez nuts">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_21_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/PingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerVelocityListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021_9_12_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_2021_9_12_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_21__10_15_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_06_21__10_15_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_21__8_35_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_06_21__8_35_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_21__11_42_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_18_06_21__11_42_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_21__9_12_AM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_21__9_12_AM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kpm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kpm.iml" afterDir="false" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="yah yah yah">
       <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/KPM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/KPMCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/KPMCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SplashPotionSpeedCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/commands/SplashPotionSpeedCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDamageByEntityListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerJoinListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileLaunchListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/ProjectileLaunchListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/PlayerDeathListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/EntityDeathListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +58,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -123,95 +109,13 @@
       <workItem from="1623115809073" duration="725000" />
       <workItem from="1623116752574" duration="1520000" />
       <workItem from="1623709087409" duration="8490000" />
-      <workItem from="1623792476031" duration="507000" />
-      <workItem from="1623896903741" duration="402000" />
-      <workItem from="1623897520976" duration="2000" />
-      <workItem from="1623897686395" duration="1794000" />
-      <workItem from="1623968429714" duration="2089000" />
-    </task>
-    <task id="LOCAL-00001" summary="skeet">
-      <created>1623195696747</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1623195696747</updated>
-    </task>
-    <task id="LOCAL-00002" summary="hmmmmmm">
-      <created>1623276626304</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1623276626304</updated>
-    </task>
-    <task id="LOCAL-00003" summary="re-add a listener class i deleted without committing, it's a temp class">
-      <created>1623277362385</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1623277362385</updated>
-    </task>
-    <task id="LOCAL-00004" summary="re-add a listener class i deleted without committing, it's a temp class">
-      <created>1623277370808</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1623277370808</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update artifactid">
-      <created>1623278336070</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1623278336070</updated>
-    </task>
-    <task id="LOCAL-00006" summary="bofa">
-      <created>1623291922745</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1623291922745</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add armor prep + todo">
-      <created>1623616996197</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1623616996197</updated>
-    </task>
-    <task id="LOCAL-00008" summary="reformat + still adding armor event">
-      <created>1623623674079</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1623623674080</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fix comments lmao">
-      <created>1623623781331</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1623623781331</updated>
-    </task>
-    <task id="LOCAL-00010" summary="an attempt at fixing messy code">
-      <created>1623624023087</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1623624023087</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add soup">
-      <created>1623625416770</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1623625416770</updated>
-    </task>
-    <task id="LOCAL-00012" summary="various updates">
-      <created>1623628210314</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1623628210314</updated>
+      <workItem from="1623792476031" duration="4886000" />
+      <workItem from="1623812104758" duration="890000" />
+      <workItem from="1623884592255" duration="4992000" />
+      <workItem from="1623980915041" duration="354000" />
+      <workItem from="1624224422368" duration="8372000" />
+      <workItem from="1624329688032" duration="12000" />
+      <workItem from="1624395405820" duration="921000" />
     </task>
     <task id="LOCAL-00013" summary="run maven clean goal">
       <created>1623628291651</created>
@@ -318,14 +222,245 @@
       <option name="project" value="LOCAL" />
       <updated>1623722165967</updated>
     </task>
-    <task id="LOCAL-00028" summary="more on potioneffect">
-      <created>1623899487105</created>
+    <task id="LOCAL-00028" summary="update">
+      <created>1623794492990</created>
       <option name="number" value="00028" />
       <option name="presentableId" value="LOCAL-00028" />
       <option name="project" value="LOCAL" />
-      <updated>1623899487105</updated>
+      <updated>1623794492990</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="pog">
+      <created>1623811034206</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1623811034206</updated>
+    </task>
+    <task id="LOCAL-00030" summary="various non-code updates">
+      <created>1623811440486</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1623811440486</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix pom">
+      <created>1623811738765</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1623811738765</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fix pom">
+      <created>1623812351956</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1623812351956</updated>
+    </task>
+    <task id="LOCAL-00033" summary="stuff">
+      <created>1623884910804</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1623884910804</updated>
+    </task>
+    <task id="LOCAL-00034" summary="add more to edbe listener">
+      <created>1623890996687</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1623890996687</updated>
+    </task>
+    <task id="LOCAL-00035" summary="build files i guess">
+      <created>1623891053745</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623891053745</updated>
+    </task>
+    <task id="LOCAL-00036" summary="bowfix and more">
+      <created>1623894647658</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1623894647658</updated>
+    </task>
+    <task id="LOCAL-00037" summary="files">
+      <created>1623894672121</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1623894672121</updated>
+    </task>
+    <task id="LOCAL-00038" summary="potential fix">
+      <created>1623974311183</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1623974311184</updated>
+    </task>
+    <task id="LOCAL-00039" summary="dammit">
+      <created>1623976191429</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1623976191429</updated>
+    </task>
+    <task id="LOCAL-00040" summary="perhaps it's this">
+      <created>1623977077355</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1623977077355</updated>
+    </task>
+    <task id="LOCAL-00041" summary="HMMM">
+      <created>1623979288430</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1623979288430</updated>
+    </task>
+    <task id="LOCAL-00042" summary="finally">
+      <created>1623980180413</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1623980180413</updated>
+    </task>
+    <task id="LOCAL-00043" summary="full build">
+      <created>1623980266315</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1623980266315</updated>
+    </task>
+    <task id="LOCAL-00044" summary="stuff">
+      <created>1623980756698</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1623980756698</updated>
+    </task>
+    <task id="LOCAL-00045" summary="????">
+      <created>1624223649361</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1624223649361</updated>
+    </task>
+    <task id="LOCAL-00046" summary="????">
+      <created>1624223708077</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1624223708077</updated>
+    </task>
+    <task id="LOCAL-00047" summary="try putting old code in again.">
+      <created>1624224193707</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1624224193707</updated>
+    </task>
+    <task id="LOCAL-00048" summary="change == to &gt;=">
+      <created>1624224280490</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1624224280490</updated>
+    </task>
+    <task id="LOCAL-00049" summary="a lot of changes">
+      <created>1624232958927</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1624232958927</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Many edits">
+      <created>1624234913618</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1624234913619</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Many edits">
+      <created>1624238772615</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1624238772615</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Many edits">
+      <created>1624315875663</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1624315875663</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Add configs">
+      <created>1624316063569</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1624316063569</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Code cleanup">
+      <created>1624321056837</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1624321056837</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Code cleanup">
+      <created>1624321077555</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1624321077555</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Code cleanup">
+      <created>1624321292270</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1624321292270</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Fix">
+      <created>1624321347981</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1624321347981</updated>
+    </task>
+    <task id="LOCAL-00058" summary="git remote changes">
+      <created>1624322520025</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1624322520025</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Fix">
+      <created>1624323954376</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1624323954376</updated>
+    </task>
+    <task id="LOCAL-00060" summary="yah yah yah">
+      <created>1624405175698</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1624405175699</updated>
+    </task>
+    <task id="LOCAL-00061" summary="yah yah yah">
+      <created>1624405663243</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1624405663244</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,31 +480,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="skeet" />
-    <MESSAGE value="hmmmmmm" />
-    <MESSAGE value="re-add a listener class i deleted without committing, it's a temp class" />
-    <MESSAGE value="update artifactid" />
-    <MESSAGE value="bofa" />
-    <MESSAGE value="add armor prep + todo" />
-    <MESSAGE value="reformat + still adding armor event" />
-    <MESSAGE value="fix comments lmao" />
-    <MESSAGE value="an attempt at fixing messy code" />
-    <MESSAGE value="add soup" />
-    <MESSAGE value="various updates" />
-    <MESSAGE value="run maven clean goal" />
-    <MESSAGE value="???" />
-    <MESSAGE value="git is confusing sometimes lol" />
-    <MESSAGE value="git is confusing sometimes lol pt. 2" />
-    <MESSAGE value="refactor: rename `command` to `commands`" />
-    <MESSAGE value="fix bad refactor" />
-    <MESSAGE value="workspace.xml update" />
-    <MESSAGE value="I wonder if this fixes it" />
-    <MESSAGE value="clean up some code" />
-    <MESSAGE value="even cleaner" />
-    <MESSAGE value="add more functionality" />
-    <MESSAGE value="clean" />
     <MESSAGE value="update" />
-    <MESSAGE value="more on potioneffect" />
-    <option name="LAST_COMMIT_MESSAGE" value="more on potioneffect" />
+    <MESSAGE value="pog" />
+    <MESSAGE value="various non-code updates" />
+    <MESSAGE value="fix pom" />
+    <MESSAGE value="add more to edbe listener" />
+    <MESSAGE value="build files i guess" />
+    <MESSAGE value="bowfix and more" />
+    <MESSAGE value="files" />
+    <MESSAGE value="potential fix" />
+    <MESSAGE value="dammit" />
+    <MESSAGE value="perhaps it's this" />
+    <MESSAGE value="HMMM" />
+    <MESSAGE value="finally" />
+    <MESSAGE value="full build" />
+    <MESSAGE value="stuff" />
+    <MESSAGE value="????" />
+    <MESSAGE value="try putting old code in again." />
+    <MESSAGE value="change == to &gt;=" />
+    <MESSAGE value="a lot of changes" />
+    <MESSAGE value="Many edits" />
+    <MESSAGE value="Add configs" />
+    <MESSAGE value="Code cleanup" />
+    <MESSAGE value="git remote changes" />
+    <MESSAGE value="Fix" />
+    <MESSAGE value="yah yah yah" />
+    <option name="LAST_COMMIT_MESSAGE" value="yah yah yah" />
   </component>
 </project>
