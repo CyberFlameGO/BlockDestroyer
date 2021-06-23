@@ -125,46 +125,5 @@ public class EntityDamageByEntityListener implements Listener
                             }, 0L);
                     }
             }
-
-        if (event.isCancelled())
-            {
-                return;
-            }
-
-        Player damaged = (Player) event.getEntity();
-        Player damager = (Player) event.getDamager();
-
-        if (damaged.getNoDamageTicks() > damaged.getMaximumNoDamageTicks() / 2D)
-            {
-                return;
-            }
-
-        double horMultiplier = net.cyberflame.kpm.KPM.getInstance().getHorMultiplier();
-        double verMultiplier = net.cyberflame.kpm.KPM.getInstance().getVerMultiplier();
-        double sprintMultiplier = damager.isSprinting() ? 0.8D : 0.5D;
-        double kbMultiplier = damager.getItemInHand() == null ? 0 : damager.getItemInHand().getEnchantmentLevel(Enchantment.KNOCKBACK) * 0.2D;
-        @SuppressWarnings("deprecation")
-        double airMultiplier = damaged.isOnGround() ? 1 : 0.5;
-
-        Vector knockback = damaged.getLocation().toVector().subtract(damager.getLocation().toVector()).normalize();
-        knockback.setX((knockback.getX() * sprintMultiplier + kbMultiplier) * horMultiplier);
-        knockback.setY(0.35D * airMultiplier * verMultiplier);
-        knockback.setZ((knockback.getZ() * sprintMultiplier + kbMultiplier) * horMultiplier);
-
-        KPM.damageListener();
-
-        try
-            {
-                // Send the velocity packet immediately instead of using setVelocity, which fixes the 'relog bug'
-                Object entityPlayer = damaged.getClass().getMethod("getHandle").invoke(damaged);
-                Object playerConnection = KPM.fieldPlayerConnection.get(entityPlayer);
-                Object packet = KPM.packetVelocity.newInstance(damaged.getEntityId(), knockback.getX(), knockback.getY(),
-                                                               knockback.getZ());
-                KPM.sendPacket.invoke(playerConnection, packet);
-            }
-        catch (SecurityException | IllegalArgumentException | IllegalAccessException | InvocationTargetException | NoSuchMethodException | InstantiationException e)
-            {
-                e.printStackTrace();
-            }
     }
 }

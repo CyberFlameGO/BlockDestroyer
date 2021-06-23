@@ -1,6 +1,7 @@
 package net.cyberflame.kpm.listeners;
 
 import net.cyberflame.kpm.KPM;
+import net.cyberflame.kpm.utils.BlockChecker;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;

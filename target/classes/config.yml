@@ -62,20 +62,14 @@ settings:
   velocity-multiplier: 2.5 # The higher the velocity multiplier the further the player will travel.
   punch-only: false # Should bow boosting only work for punch bows?
 
-# Splash potion configuration
-splashPotSpeed: 1.0
-permission: "kpm.spscommand"
-
-# Character bug fix
-fix-message: "&7Updating players' positions..."
-#Should the plugin fix characters automatically
-#will cause players flickering
-auto-fix: false
-#in seconds
-auto-fix-time: 120
-
 # Hub glass head
 glass-head: false
 
 # Experimental listeners
 experimental-features: false
+
+# Death potion
+potion-name: "&b%player%'s potion"
+blocked-effects:
+  - "ABSORPTION"
+  - "DAMAGE_RESISTANCE"
