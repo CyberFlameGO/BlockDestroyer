@@ -47,37 +47,32 @@ public class BlockPlaceListener implements Listener
                 p.teleport(checker.getLastStoodBlock().add(0.0D, 1.0D, 0.0D));
             }
 
-        //check if p has buildmode enabled,
-        if (plugin.getBuildEnabled(p.getUniqueId()))
-            {
-                return;
-            }
+        //check if p has buildmode enabled
         //else check if it was in one of the disabled worlds,
-        for (int i = 0; i < KPM.getDisabledWorlds().size(); i++)
-            {
-                String worldname = KPM.getDisabledWorlds().get(i);
-                if (world.getName().equalsIgnoreCase(worldname))
-                    {
-                        //return on same name as the world is in disabled-worlds.
-                        return;
-                    }
-            }
         //else, schedule a delayed-task to run after x amount of ticks,
         if (!(blockMaterial == Material.STONE_SLAB2 || blockMaterial == Material.DOUBLE_STONE_SLAB2
               || blockMaterial == Material.STEP || blockMaterial == Material.DOUBLE_STEP
               || blockMaterial == Material.WOOD_STEP || blockMaterial == Material.WOOD_DOUBLE_STEP
-              || blockMaterial == Material.SNOW))
+              || blockMaterial == Material.SNOW && !(plugin.getBuildEnabled(p.getUniqueId()))))
             {
-                Bukkit.getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable()
-                {
-                    public void run()
+                for (int i = 0; i < KPM.getDisabledWorlds().size(); i++)
                     {
-                        //remove the block placed.
-                        block.setType(Material.AIR);
-                        world.playSound(location, Sound.DIG_STONE, 1F, 1F);
-                        world.playEffect(location, Effect.TILE_BREAK, block.getType());
+                        String worldname = KPM.getDisabledWorlds().get(i);
+                        if (!(world.getName().equalsIgnoreCase(worldname)))
+                            {
+                                return;
+                            }
+                        Bukkit.getScheduler().scheduleSyncDelayedTask(this.plugin, new Runnable()
+                        {
+                            public void run()
+                            {
+                                //remove the block placed.
+                                block.setType(Material.AIR);
+                                world.playSound(location, Sound.DIG_STONE, 1F, 1F);
+                                world.playEffect(location, Effect.TILE_BREAK, block.getType());
+                            }
+                        }, 20L * 2L * 3l);
                     }
-                }, 20L * 2L * 3l);
             }
         else
             p.sendMessage(ChatColor.RED + "Sorry, but you cannot place this material.");
