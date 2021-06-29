@@ -20,7 +20,7 @@ public class EntityDeathListener implements Listener {
             return;
         }
         Player victim = (Player) event.getEntity();
-        if (victim.getActivePotionEffects().size() == 0)
+        if (victim.getActivePotionEffects() == null)
             return;
 
         ItemStack item = new ItemStack(Material.POTION, 1);
