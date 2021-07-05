@@ -118,6 +118,8 @@ public class Utils
         } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException | NoSuchFieldException e) {
             e.printStackTrace();
         }
+        
+        return ping;
     }
 
     public static String getServerVersion()
