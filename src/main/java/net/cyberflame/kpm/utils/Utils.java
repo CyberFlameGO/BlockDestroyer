@@ -108,16 +108,16 @@ public class Utils
         return message.replace(str0, str1);
     }
 
-    public static int getPingReflection(Player player) throws Exception
+    public static int getPingReflection(Player player)
     {
         int ping = 0;
-        Class<?> craftPlayer = Class.forName("org.bukkit.craftbukkit." + getServerVersion() + "entity.CraftPlayer");
-        Object converted = craftPlayer.cast(player);
-        Method handle = converted.getClass().getMethod("getHandle");
-        Object entityPlayer = handle.invoke(converted);
-        Field pingField = entityPlayer.getClass().getField("ping");
-        ping = pingField.getInt(entityPlayer);
-        return ping;
+        
+        try {
+            Object entityPlayer = target.getClass().getMethod("getHandle").invoke(target);
+            ping = String.valueOf((int) entityPlayer.getClass().getField("ping").get(entityPlayer));
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException | NoSuchFieldException e) {
+            e.printStackTrace();
+        }
     }
 
     public static String getServerVersion()
