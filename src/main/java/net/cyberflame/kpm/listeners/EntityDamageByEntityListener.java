@@ -72,7 +72,7 @@ public class EntityDamageByEntityListener implements Listener
                     }
             }
 
-        if (event.getDamager() instanceof Snowball)
+        if (event.getDamager() instanceof Snowball) {
             if (event.getEntity() instanceof Player)
                 {
                     Player victim = (Player) event.getEntity();
@@ -83,47 +83,6 @@ public class EntityDamageByEntityListener implements Listener
                             victim.addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 20 * 10, 1));
                         }
                 }
-
-        if (event.getDamager() instanceof Projectile && event.getEntity() instanceof Player)
-            {
-                Player p = (Player) event.getEntity();
-                Projectile projectile = (Projectile) event.getDamager();
-                if (projectile.getType() == EntityType.ARROW && projectile.getShooter() instanceof Player &&
-                    ((Player) projectile.getShooter()).getUniqueId().equals(p.getUniqueId()))
-                    {
-                        ItemStack item = p.getItemInHand();
-                        if (this.KPM.getConfig().getBoolean("settings.punch-only", false)
-                            && !item.containsEnchantment(Enchantment.ARROW_KNOCKBACK))
-                            {
-                                return;
-                            }
-                        if (this.KPM.getConfig().getBoolean("settings.punch-only", true)
-                            && item.containsEnchantment(Enchantment.ARROW_KNOCKBACK))
-                            {
-                                int enchLevel = item.getEnchantmentLevel(Enchantment.ARROW_KNOCKBACK);
-                                if (enchLevel != 2)
-                                    {
-                                        return;
-                                    }
-                            }
-
-                        if (event.getEntity().getWorld().getName().startsWith("PlayerWarp") &&
-                            Zone.contains(event.getEntity().getLocation(), 21, 27, -6, 0))
-                            {
-                                event.setCancelled(true);
-                                sendMessage(event.getEntity(), "&cYou cannot use this in a safezone.");
-
-                                return;
-                            }
-
-                        event.setDamage(1.0D);
-                        Bukkit.getServer().getScheduler().runTaskLater(this.KPM, () ->
-                            {
-                            Vector velocity = p.getEyeLocation().getDirection().multiply(this.KPM.getConfig().getDouble("settings.velocity-multiplier", 2.5D));
-                            velocity.setY(0.33D);
-                            p.setVelocity(velocity);
-                            }, 0L);
-                    }
-            }
+        }
     }
 }
