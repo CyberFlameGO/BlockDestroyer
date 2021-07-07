@@ -10,4 +10,3 @@ deploy:
   api_key: "$token"
   file: "KPM.jar"
   cleanup: true
-  edge: true
