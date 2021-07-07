@@ -11,4 +11,4 @@ deploy:
   file: "KPM.jar"
   cleanup: true
   on:
-    branches: master
+    branch: master
