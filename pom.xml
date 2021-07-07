@@ -8,10 +8,10 @@
   <version>1.0.0</version>
   <name>KPM</name>
   <repositories>
-      <repository>
+  <!--    <repository>
           <id>spigot-repo</id>
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-      </repository>
+      </repository> -->
       <repository>
           <id>paper</id>
           <url>https://destroystokyo.com/repo/repository/maven-public/</url>
