@@ -9,12 +9,15 @@
   <name>KPM</name>
   <repositories>
       <repository>
-          <id>spigot-snapshots</id>
+          <id>spigot-repo</id>
           <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
       </repository>
       <repository>
           <id>paper</id>
           <url>https://destroystokyo.com/repo/repository/maven-public/</url>
+	  <snapshots>
+              <enabled>true</enabled>
+	  </snapshots>
       </repository>
   </repositories>
   <dependencies>
