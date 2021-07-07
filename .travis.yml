@@ -10,3 +10,4 @@ deploy:
   api_key: "$TRAVISCI_GITHUB_PAT"
   file: "KPM.jar"
   cleanup: true
+  edge: true
