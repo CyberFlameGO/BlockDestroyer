@@ -141,11 +141,13 @@ public class KPM extends JavaPlugin
         return enabledBuild.get(uuid) != null;
     }
 
-    public String getPotionName() {
+    public String getPotionName() 
+    {
         return this.POTION_NAME;
     }
 
-    public List<String> getBlockedEffects() {
+    public List<String> getBlockedEffects() 
+    {
         return this.BLOCKED_EFFECTS;
     }
 
