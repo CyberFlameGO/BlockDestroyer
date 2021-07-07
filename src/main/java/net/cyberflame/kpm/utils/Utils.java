@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -113,9 +113,12 @@ public class Utils
         int ping = 0;
         
         try {
-            Object entityPlayer = target.getClass().getMethod("getHandle").invoke(target);
-            ping = String.valueOf((int) entityPlayer.getClass().getField("ping").get(entityPlayer));
-        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException | NoSuchFieldException e) {
+            Class<?> craftPlayer = Class.forName("org.bukkit.craftbukkit." + getServerVersion() + "entity.CraftPlayer");
+            Object converted = craftPlayer.cast(player);
+            Object entityPlayer = converted.getClass().getMethod("getHandle").invoke(converted);
+            Field pingField = entityPlayer.getClass().getField("ping");
+            ping = pingField.getInt(entityPlayer);
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException | NoSuchMethodException | SecurityException | NoSuchFieldException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         

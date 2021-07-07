@@ -3,13 +3,13 @@ package net.cyberflame.kpm.listeners;
 import net.cyberflame.kpm.KPM;
 import net.cyberflame.kpm.utils.BlockChecker;
 import org.bukkit.*;
-import org.bukkit.BukkitRunnable;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class BlockPlaceListener implements Listener
 {

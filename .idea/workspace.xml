@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="potential buildmode functionality fix" />
+    <list default="true" id="1d0839a9-ec55-4779-be3a-a23d9f13e044" name="Default Changelist" comment="nya">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_8_8_R0_1_SNAPSHOT.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_8_8_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_06_2021_11_59_AM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_06_2021_11_59_AM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_06_21,_2_09_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_06_21__2_09_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kpm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kpm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/BlockPlaceListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/listeners/BlockPlaceListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/cyberflame/kpm/utils/Utils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +88,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -142,13 +155,8 @@
       <workItem from="1624488256052" duration="1375000" />
       <workItem from="1624583297277" duration="400000" />
       <workItem from="1624926086127" duration="1043000" />
-    </task>
-    <task id="LOCAL-00019" summary="workspace.xml update">
-      <created>1623633591533</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1623633591533</updated>
+      <workItem from="1624931673440" duration="850000" />
+      <workItem from="1625621871641" duration="366000" />
     </task>
     <task id="LOCAL-00020" summary="I wonder if this fixes it">
       <created>1623709592680</created>
@@ -486,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624927344908</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="nya">
+      <created>1624931711983</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1624931711983</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +528,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add more to edbe listener" />
     <MESSAGE value="build files i guess" />
     <MESSAGE value="bowfix and more" />
     <MESSAGE value="files" />
@@ -538,6 +552,7 @@
     <MESSAGE value="oops" />
     <MESSAGE value="fix" />
     <MESSAGE value="potential buildmode functionality fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="potential buildmode functionality fix" />
+    <MESSAGE value="nya" />
+    <option name="LAST_COMMIT_MESSAGE" value="nya" />
   </component>
 </project>
