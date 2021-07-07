@@ -8,7 +8,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $token
-  file: "KPM.jar"
+  file: "target/KPM.jar"
   cleanup: true
   on:
     branch: master
