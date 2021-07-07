@@ -10,3 +10,5 @@ deploy:
   api_key: "$token"
   file: "KPM.jar"
   cleanup: true
+  on:
+    branches: master
