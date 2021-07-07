@@ -10,3 +10,5 @@ language: java
       api_key: $TRAVISCI_GITHUB_PAT
       file: "KPM.jar"
       skip_cleanup: true
+      on:
+        branch: release
